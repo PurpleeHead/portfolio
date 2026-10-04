@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Artemio — Frontend Developer</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Artemio — Junior Frontend Developer</title>
+
     <meta
       name="description"
-      content="Портфолио Artemio — Junior Frontend Developer"
+      content="Портфолио Artemio — Junior Frontend Developer. HTML, CSS, JavaScript, TypeScript и React."
     />
 
     <meta property="og:title" content="Artemio — Junior Frontend Developer" />
@@ -24,14 +24,18 @@
     />
 
     <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
     <header class="header">
       <div class="container">
-        <a class="logo" href="/">Kutelev Artem Albertovich</a>
+        <a class="logo" href="./" aria-label="Artemio — главная">
+          Kutelev Artem
+        </a>
 
-        <nav class="nav">
+        <nav class="nav" aria-label="Основная навигация">
           <a href="#projects">Проекты</a>
           <a href="#about">Обо мне</a>
           <a href="#skills">Навыки</a>
@@ -41,46 +45,67 @@
     </header>
 
     <main>
+      <!-- Hero -->
+
       <section class="hero">
         <div class="container">
-          <p class="hero__subtitle">Frontend Developer</p>
+          <div class="hero__heading">
+            <p class="hero__subtitle">Junior Frontend Developer</p>
 
-          <div class="hero__title-wrapper">
-            <h1 class="hero__title">
-              Создаю современные<br />
-              и адаптивные сайты
-            </h1>
+            <div class="hero__title-wrapper">
+              <h1 class="hero__title">
+                Создаю современные<br />
+                и адаптивные веб-интерфейсы.
+              </h1>
 
-            <div class="hero__color-layer" aria-hidden="true">
-              Создаю современные<br />
-              и адаптивные сайты
+              <div class="hero__color-layer" aria-hidden="true">
+                Создаю современные<br />
+                и адаптивные веб-интерфейсы.
+              </div>
+
+              <div class="hero__lens" aria-hidden="true"></div>
             </div>
-
-            <div class="hero__lens" aria-hidden="true"></div>
           </div>
 
           <p class="hero__text">HTML · CSS · JavaScript · TypeScript · React</p>
+          <div class="hero__block">
+            <p class="hero__status">
+              <span class="hero__status-dot"></span>
+              Открыт к работе
+            </p>
 
-          <a class="button" href="#projects"> Смотреть проекты </a>
+            <a class="button" href="#projects">
+              <span>Смотреть проекты</span>
+            </a>
+          </div>
         </div>
       </section>
 
+      <!-- Projects -->
+
       <section class="projects" id="projects">
         <div class="container">
-          <p class="section__subtitle">Мои работы</p>
-
-          <h2 class="section__title">Проекты</h2>
+          <div class="section__heading reveal">
+            <p class="section__subtitle">Мои работы</p>
+            <h2 class="section__title">Проекты</h2>
+          </div>
 
           <div class="projects__list">
-            <article class="project">
-              <div class="project__image">
-                <img src="./images/sminex.png" alt="Sminex" />
+            <article class="project reveal">
+              <div class="project__image project__image--cover">
+                <img
+                  src="./images/sminex.png"
+                  alt="Sminex — адаптивный лендинг жилого комплекса"
+                  fetchpriority="high"
+                />
               </div>
 
               <div class="project__content">
-                <p class="project__number">01 / LANDING PAGE</p>
+                <div class="project__heading">
+                  <p class="project__number">01 / LANDING PAGE</p>
 
-                <h3 class="project__title">Sminex</h3>
+                  <h3 class="project__title">Sminex</h3>
+                </div>
 
                 <p class="project__description">
                   Адаптивный лендинг жилого комплекса, сверстанный по готовому
@@ -91,6 +116,7 @@
                 <p class="project__stack">
                   HTML5 · SCSS · БЭМ · SVG · WebP · Git
                 </p>
+
                 <ul class="project__features">
                   <li>Адаптивная верстка</li>
                   <li>БЭМ</li>
@@ -117,24 +143,32 @@
                 </div>
               </div>
             </article>
-            <article class="project">
+
+            <article class="project reveal">
               <div class="project__image project__image--notes">
                 <div class="project__screens">
                   <img
                     src="./images/notes-auth.png"
-                    alt="Notes App — авторизация"
+                    alt="Personal Notes App — авторизация"
+                    loading="lazy"
+                    decoding="async"
                   />
+
                   <img
                     src="./images/notes-list.png"
-                    alt="Notes App — список заметок"
+                    alt="Personal Notes App — список заметок"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
 
               <div class="project__content">
-                <p class="project__number">02 / FULL-STACK WEB APP</p>
+                <div class="project__heading">
+                  <p class="project__number">02 / FULL-STACK WEB APP</p>
 
-                <h3 class="project__title">Personal Notes App</h3>
+                  <h3 class="project__title">Personal Notes App</h3>
+                </div>
 
                 <p class="project__description">
                   Full-stack приложение для регистрации пользователей,
@@ -164,21 +198,80 @@
                 </div>
               </div>
             </article>
+            <article class="project reveal">
+              <div class="project__image project__image--video">
+                <video
+                  src="./images/whitemark-preview.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Whitemark — анимационный прелоадер"
+                ></video>
+              </div>
+
+              <div class="project__content">
+                <div class="project__heading">
+                  <p class="project__number">03 / LANDING PAGE</p>
+
+                  <h3 class="project__title">Whitemark</h3>
+                </div>
+
+                <p class="project__description">
+                  Адаптивная страница контактов с анимационным прелоадером. При
+                  первой загрузке последовательно появляются логотипы компаний,
+                  после чего прелоадер плавно исчезает и открывается основной
+                  интерфейс.
+                </p>
+
+                <p class="project__stack">HTML5 · SCSS · БЭМ · SVG · Git</p>
+
+                <ul class="project__features">
+                  <li>Анимационный прелоадер</li>
+                  <li>SVG-спрайт</li>
+                  <li>CSS-анимации</li>
+                  <li>Адаптивная верстка</li>
+                  <li>GitHub Pages</li>
+                </ul>
+
+                <div class="project__links">
+                  <a
+                    href="https://purpleehead.github.io/whitemark-preview/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/PurpleeHead/whitemark-preview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+            ```
           </div>
         </div>
       </section>
 
+      <!-- About -->
+
       <section class="about" id="about">
         <div class="container">
-          <p class="section__subtitle">Обо мне</p>
+          <div class="section__heading reveal">
+            <p class="section__subtitle">Обо мне</p>
+            <h2 class="section__title">Junior Frontend Developer</h2>
+          </div>
 
-          <h2 class="section__title">Junior Frontend Developer</h2>
-
-          <div class="about__content">
+          <div class="about__content reveal">
             <p class="about__text">
-              Развиваюсь во frontend-разработке и занимаюсь созданием адаптивных
-              веб-интерфейсов. Практикую frontend на фрилансе и в учебных
-              проектах.
+              Junior Frontend Developer, развиваюсь в создании адаптивных
+              веб-интерфейсов и применяю знания на практических проектах.
             </p>
 
             <p class="about__text about__text--small">
@@ -196,14 +289,17 @@
         </div>
       </section>
 
+      <!-- Skills -->
+
       <section class="skills" id="skills">
         <div class="container">
-          <p class="section__subtitle">Технологии и инструменты</p>
-
-          <h2 class="section__title">Skills</h2>
+          <div class="section__heading reveal">
+            <p class="section__subtitle">Технологии и инструменты</p>
+            <h2 class="section__title">Skills</h2>
+          </div>
 
           <div class="skills__grid">
-            <div class="skills__group">
+            <div class="skills__group reveal">
               <h3 class="skills__group-title">HTML & CSS</h3>
 
               <ul class="skills__list">
@@ -219,7 +315,7 @@
               </ul>
             </div>
 
-            <div class="skills__group">
+            <div class="skills__group reveal">
               <h3 class="skills__group-title">JavaScript</h3>
 
               <ul class="skills__list">
@@ -233,7 +329,7 @@
               </ul>
             </div>
 
-            <div class="skills__group">
+            <div class="skills__group reveal">
               <h3 class="skills__group-title">React & TypeScript</h3>
 
               <ul class="skills__list">
@@ -247,7 +343,7 @@
               </ul>
             </div>
 
-            <div class="skills__group">
+            <div class="skills__group reveal">
               <h3 class="skills__group-title">SVG & Optimization</h3>
 
               <ul class="skills__list">
@@ -262,7 +358,7 @@
               </ul>
             </div>
 
-            <div class="skills__group">
+            <div class="skills__group reveal">
               <h3 class="skills__group-title">Tools</h3>
 
               <ul class="skills__list">
@@ -279,17 +375,21 @@
       </section>
     </main>
 
+    <!-- Footer -->
+
     <footer class="footer" id="contacts">
       <div class="container">
-        <p class="section__subtitle">Контакты</p>
+        <div class="section__heading reveal">
+          <p class="section__subtitle">Контакты</p>
+          <h2 class="footer__title">Обсудим проект?</h2>
+        </div>
 
-        <h2 class="footer__title">Давайте работать вместе</h2>
-
-        <p class="footer__text">
-          Открыт к предложениям о работе и интересным frontend-проектам.
+        <p class="footer__text reveal">
+          Открыт к предложениям о работе, freelance-задачам и интересным
+          frontend-проектам.
         </p>
 
-        <div class="footer__links">
+        <div class="footer__links reveal">
           <a
             href="https://github.com/PurpleeHead"
             target="_blank"
@@ -316,9 +416,36 @@
         </div>
 
         <p class="footer__copyright">
-          © 2026 Kutelev Artem Albertovich. Frontend Developer.
+          © 2026 Kutelev Artem. Frontend Developer.
         </p>
       </div>
     </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+      document.body.classList.add("reveal-enabled");
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -40px 0px",
+        },
+      );
+
+      reveals.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    </script>
   </body>
 </html>
