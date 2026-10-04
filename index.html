@@ -10,6 +10,20 @@
       name="description"
       content="Портфолио Artemio — Junior Frontend Developer"
     />
+
+    <meta property="og:title" content="Artemio — Junior Frontend Developer" />
+
+    <meta
+      property="og:description"
+      content="Портфолио Junior Frontend Developer — веб-интерфейсы, React, TypeScript, HTML и SCSS."
+    />
+
+    <meta
+      property="og:url"
+      content="https://purpleehead.github.io/portfolio/"
+    />
+
+    <meta property="og:type" content="website" />
   </head>
 
   <body>
@@ -31,10 +45,19 @@
         <div class="container">
           <p class="hero__subtitle">Frontend Developer</p>
 
-          <h1 class="hero__title">
-            Создаю современные<br />
-            и адаптивные сайты
-          </h1>
+          <div class="hero__title-wrapper">
+            <h1 class="hero__title">
+              Создаю современные<br />
+              и адаптивные сайты
+            </h1>
+
+            <div class="hero__color-layer" aria-hidden="true">
+              Создаю современные<br />
+              и адаптивные сайты
+            </div>
+
+            <div class="hero__lens" aria-hidden="true"></div>
+          </div>
 
           <p class="hero__text">HTML · CSS · JavaScript · TypeScript · React</p>
 
@@ -283,7 +306,13 @@
             Telegram
           </a>
 
-          <a href="mailto:purpleehead@gmail.com"> Email </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=purpleehead@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Email
+          </a>
         </div>
 
         <p class="footer__copyright">
