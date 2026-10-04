@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Artemio — Frontend Developer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta
+      name="description"
+      content="Портфолио Artemio — Junior Frontend Developer"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="logo" href="/">Kutelev Artem Albertovich</a>
+
+        <nav class="nav">
+          <a href="#projects">Проекты</a>
+          <a href="#about">Обо мне</a>
+          <a href="#skills">Навыки</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="hero__subtitle">Frontend Developer</p>
+
+          <h1 class="hero__title">
+            Создаю современные<br />
+            и адаптивные сайты
+          </h1>
+
+          <p class="hero__text">HTML · CSS · JavaScript · TypeScript · React</p>
+
+          <a class="button" href="#projects"> Смотреть проекты </a>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <p class="section__subtitle">Мои работы</p>
+
+          <h2 class="section__title">Проекты</h2>
+
+          <div class="projects__list">
+            <article class="project">
+              <div class="project__image">
+                <img src="./images/sminex.png" alt="Sminex" />
+              </div>
+
+              <div class="project__content">
+                <p class="project__number">01 / LANDING PAGE</p>
+
+                <h3 class="project__title">Sminex</h3>
+
+                <p class="project__description">
+                  Адаптивный лендинг жилого комплекса, сверстанный по готовому
+                  дизайну. Реализовал структуру страницы, адаптивную верстку и
+                  оптимизацию изображений.
+                </p>
+
+                <p class="project__stack">
+                  HTML5 · SCSS · БЭМ · SVG · WebP · Git
+                </p>
+                <ul class="project__features">
+                  <li>Адаптивная верстка</li>
+                  <li>БЭМ</li>
+                  <li>SVG-спрайт</li>
+                  <li>Оптимизация изображений</li>
+                </ul>
+
+                <div class="project__links">
+                  <a
+                    href="https://purpleehead.github.io/sminex/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/PurpleeHead/sminex"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project__image project__image--notes">
+                <div class="project__screens">
+                  <img
+                    src="./images/notes-auth.png"
+                    alt="Notes App — авторизация"
+                  />
+                  <img
+                    src="./images/notes-list.png"
+                    alt="Notes App — список заметок"
+                  />
+                </div>
+              </div>
+
+              <div class="project__content">
+                <p class="project__number">02 / FULL-STACK WEB APP</p>
+
+                <h3 class="project__title">Personal Notes App</h3>
+
+                <p class="project__description">
+                  Full-stack приложение для регистрации пользователей,
+                  авторизации и создания личных заметок с сохранением данных на
+                  сервере.
+                </p>
+
+                <p class="project__stack">
+                  React · TypeScript · Express · JWT · LowDB · Zod
+                </p>
+
+                <ul class="project__features">
+                  <li>Регистрация и авторизация</li>
+                  <li>JWT + Cookies</li>
+                  <li>REST API</li>
+                  <li>Сохранение заметок</li>
+                </ul>
+
+                <div class="project__links">
+                  <a
+                    href="https://github.com/PurpleeHead/personal-notes-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <p class="section__subtitle">Обо мне</p>
+
+          <h2 class="section__title">Junior Frontend Developer</h2>
+
+          <div class="about__content">
+            <p class="about__text">
+              Развиваюсь во frontend-разработке и занимаюсь созданием адаптивных
+              веб-интерфейсов. Практикую frontend на фрилансе и в учебных
+              проектах.
+            </p>
+
+            <p class="about__text about__text--small">
+              Работаю с HTML5, CSS3, SCSS, JavaScript, TypeScript и React.
+              Использую БЭМ, SVG-спрайты, SVG-анимации, адаптивную верстку,
+              оптимизацию изображений и современные подходы к организации кода.
+            </p>
+
+            <p class="about__text about__text--small">
+              Работаю с Git и GitHub, умею переводить макеты из Figma в готовые
+              интерфейсы и уделяю внимание производительности, семантике и
+              кроссбраузерности.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <div class="container">
+          <p class="section__subtitle">Технологии и инструменты</p>
+
+          <h2 class="section__title">Skills</h2>
+
+          <div class="skills__grid">
+            <div class="skills__group">
+              <h3 class="skills__group-title">HTML & CSS</h3>
+
+              <ul class="skills__list">
+                <li>HTML5</li>
+                <li>Semantic HTML</li>
+                <li>CSS3</li>
+                <li>SCSS</li>
+                <li>BEM</li>
+                <li>Flexbox</li>
+                <li>CSS Grid</li>
+                <li>Responsive Design</li>
+                <li>Mobile First</li>
+              </ul>
+            </div>
+
+            <div class="skills__group">
+              <h3 class="skills__group-title">JavaScript</h3>
+
+              <ul class="skills__list">
+                <li>JavaScript ES6+</li>
+                <li>DOM</li>
+                <li>Events</li>
+                <li>Async / Await</li>
+                <li>Fetch API</li>
+                <li>JSON</li>
+                <li>ES Modules</li>
+              </ul>
+            </div>
+
+            <div class="skills__group">
+              <h3 class="skills__group-title">React & TypeScript</h3>
+
+              <ul class="skills__list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>React Hooks</li>
+                <li>React Router</li>
+                <li>React Hook Form</li>
+                <li>Zod</li>
+                <li>React Query</li>
+              </ul>
+            </div>
+
+            <div class="skills__group">
+              <h3 class="skills__group-title">SVG & Optimization</h3>
+
+              <ul class="skills__list">
+                <li>SVG</li>
+                <li>SVG Sprite</li>
+                <li>SVG Animation</li>
+                <li>WebP</li>
+                <li>AVIF</li>
+                <li>Lazy Loading</li>
+                <li>Image Optimization</li>
+                <li>Lighthouse</li>
+              </ul>
+            </div>
+
+            <div class="skills__group">
+              <h3 class="skills__group-title">Tools</h3>
+
+              <ul class="skills__list">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Figma</li>
+                <li>VS Code</li>
+                <li>npm</li>
+                <li>Chrome DevTools</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <p class="section__subtitle">Контакты</p>
+
+        <h2 class="footer__title">Давайте работать вместе</h2>
+
+        <p class="footer__text">
+          Открыт к предложениям о работе и интересным frontend-проектам.
+        </p>
+
+        <div class="footer__links">
+          <a
+            href="https://github.com/PurpleeHead"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://t.me/art_alberto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Telegram
+          </a>
+
+          <a href="mailto:purpleehead@gmail.com"> Email </a>
+        </div>
+
+        <p class="footer__copyright">
+          © 2026 Kutelev Artem Albertovich. Frontend Developer.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
