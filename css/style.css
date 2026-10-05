@@ -284,9 +284,7 @@ a:focus-visible {
 
   pointer-events: none;
 
-  clip-path: circle(
-    calc(var(--lens-size) / 2) at 10% 18%
-  );
+  clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
 
   animation: colorReveal 10s ease-in-out infinite;
 }
@@ -359,45 +357,31 @@ a:focus-visible {
 
 @keyframes colorReveal {
   0% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 10% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
   }
 
   16% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 34% 22%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 34% 22%);
   }
 
   33% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 60% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 60% 18%);
   }
 
   50% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 88% 48%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 88% 48%);
   }
 
   66% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 68% 82%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 68% 82%);
   }
 
   83% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 30% 72%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 30% 72%);
   }
 
   100% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 10% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
   }
 }
 
@@ -1179,7 +1163,7 @@ a:focus-visible {
 ========================= */
 
 .footer__icon-svg--email {
-  width: 26px;
+  width: 22px;
   height: 22px;
 
   overflow: visible;
@@ -1496,39 +1480,27 @@ a:focus-visible {
 
 @keyframes colorRevealTablet {
   0% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 10% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
   }
 
   20% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 28% 22%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 28% 22%);
   }
 
   40% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 50% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 50% 18%);
   }
 
   60% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 72% 48%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 72% 48%);
   }
 
   80% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 42% 72%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 42% 72%);
   }
 
   100% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 10% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
   }
 }
 
@@ -1605,7 +1577,7 @@ a:focus-visible {
   }
 
   .footer__icon-svg--email {
-    width: 26px;
+    width: 22px;
     height: 22px;
   }
 }
@@ -1648,39 +1620,27 @@ a:focus-visible {
 
 @keyframes colorRevealMobile {
   0% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 12% 20%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 12% 20%);
   }
 
   20% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 36% 18%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 36% 18%);
   }
 
   40% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 68% 22%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 68% 22%);
   }
 
   60% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 82% 55%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 82% 55%);
   }
 
   80% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 48% 78%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 48% 78%);
   }
 
   100% {
-    clip-path: circle(
-      calc(var(--lens-size) / 2) at 12% 20%
-    );
+    clip-path: circle(calc(var(--lens-size) / 2) at 12% 20%);
   }
 }
 
