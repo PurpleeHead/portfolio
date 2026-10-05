@@ -23,6 +23,8 @@
   --muted: #999999;
   --line: #2c2c2c;
   --accent: #f5f5f2;
+
+  /* Важно: карточки остаются тёмными */
   --white: #1c1c1c;
 
   --notes-bg: #242424;
@@ -30,10 +32,13 @@
   --footer-bg: #050505;
   --footer-text: #f5f5f2;
   --footer-muted: #888888;
+
   --button-shine: rgba(0, 0, 0, 0.18);
 }
 
-/* Reset */
+/* =========================
+   Reset
+========================= */
 
 * {
   box-sizing: border-box;
@@ -72,8 +77,12 @@ button {
   font: inherit;
 }
 
-a:focus-visible,
-button:focus-visible {
+/* Не показываем рамку/outline у кнопки темы после клика */
+button:focus {
+  outline: none;
+}
+
+a:focus-visible {
   outline: 2px solid var(--text);
   outline-offset: 4px;
 }
@@ -83,7 +92,9 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-/* Header */
+/* =========================
+   Header
+========================= */
 
 .header {
   padding: 28px 0;
@@ -128,7 +139,9 @@ button:focus-visible {
   opacity: 0.5;
 }
 
-/* Theme Toggle */
+/* =========================
+   Theme Toggle
+========================= */
 
 .theme-toggle {
   display: inline-flex;
@@ -142,7 +155,8 @@ button:focus-visible {
 
   padding: 0;
 
-  border: 1px solid var(--line);
+  /* Никакой видимой рамки */
+  border: 0;
   border-radius: 50%;
 
   background: transparent;
@@ -152,9 +166,11 @@ button:focus-visible {
 
   cursor: pointer;
 
+  -webkit-appearance: none;
+  appearance: none;
+
   transition:
     background-color 0.25s ease,
-    border-color 0.25s ease,
     color 0.25s ease,
     transform 0.25s ease;
 }
@@ -165,6 +181,16 @@ button:focus-visible {
 
 .theme-toggle:active {
   transform: scale(0.92);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 .theme-toggle__icon {
@@ -179,7 +205,9 @@ button:focus-visible {
   transform: rotate(180deg);
 }
 
-/* Hero */
+/* =========================
+   Hero
+========================= */
 
 .hero {
   position: relative;
@@ -209,7 +237,9 @@ button:focus-visible {
   letter-spacing: 0.12em;
 }
 
-/* Hero title */
+/* =========================
+   Hero title
+========================= */
 
 .hero__title-wrapper {
   position: relative;
@@ -232,7 +262,9 @@ button:focus-visible {
   font-weight: 700;
 }
 
-/* Colored title layer */
+/* =========================
+   Colored title layer
+========================= */
 
 .hero__color-layer {
   position: absolute;
@@ -252,12 +284,16 @@ button:focus-visible {
 
   pointer-events: none;
 
-  clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+  clip-path: circle(
+    calc(var(--lens-size) / 2) at 10% 18%
+  );
 
   animation: colorReveal 10s ease-in-out infinite;
 }
 
-/* Moving circle */
+/* =========================
+   Moving circle
+========================= */
 
 .hero__lens {
   position: absolute;
@@ -323,35 +359,51 @@ button:focus-visible {
 
 @keyframes colorReveal {
   0% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 10% 18%
+    );
   }
 
   16% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 34% 22%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 34% 22%
+    );
   }
 
   33% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 60% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 60% 18%
+    );
   }
 
   50% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 88% 48%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 88% 48%
+    );
   }
 
   66% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 68% 82%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 68% 82%
+    );
   }
 
   83% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 30% 72%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 30% 72%
+    );
   }
 
   100% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 10% 18%
+    );
   }
 }
 
-/* Hero text */
+/* =========================
+   Hero text
+========================= */
 
 .hero__text {
   margin: 52px 0 0;
@@ -361,7 +413,9 @@ button:focus-visible {
   font-size: 18px;
 }
 
-/* Availability */
+/* =========================
+   Availability
+========================= */
 
 .hero__block {
   display: flex;
@@ -412,7 +466,9 @@ button:focus-visible {
   }
 }
 
-/* Hero entrance animation */
+/* =========================
+   Hero entrance animation
+========================= */
 
 @keyframes heroFadeUp {
   from {
@@ -446,7 +502,9 @@ button:focus-visible {
   animation: heroFadeUp 0.8s 0.35s ease both;
 }
 
-/* Button */
+/* =========================
+   Button
+========================= */
 
 .button {
   position: relative;
@@ -483,6 +541,7 @@ button:focus-visible {
   content: "";
 
   position: absolute;
+
   top: 0;
   left: -120%;
 
@@ -523,7 +582,9 @@ button:focus-visible {
   }
 }
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
 
 .projects,
 .about,
@@ -538,23 +599,30 @@ button:focus-visible {
   padding: 80px 0;
 }
 
-/* Section heading */
+/* =========================
+   Section heading
+========================= */
 
 .section__heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   gap: 14px;
+
   margin: 0 0 70px;
 }
 
 .section__title {
   margin: 0;
+
   font-size: clamp(42px, 6vw, 72px);
   line-height: 0.95;
 }
 
-/* Scroll reveal */
+/* =========================
+   Scroll reveal
+========================= */
 
 .reveal {
   opacity: 1;
@@ -578,7 +646,9 @@ button:focus-visible {
   transform: translateY(0);
 }
 
-/* Projects */
+/* =========================
+   Projects
+========================= */
 
 .project {
   display: grid;
@@ -734,7 +804,9 @@ button:focus-visible {
   left: 0;
 }
 
-/* Notes App */
+/* =========================
+   Notes App
+========================= */
 
 .project__image--notes {
   padding: 32px;
@@ -763,14 +835,14 @@ button:focus-visible {
 
   padding: 12px;
 
-  background: #fff;
+  /* ВСЕГДА белый */
+  background: #ffffff;
 
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background-color 0.3s ease;
+    box-shadow 0.25s ease;
 }
 
 .project__screens img:hover {
@@ -779,10 +851,13 @@ button:focus-visible {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
 }
 
-/* Project video */
+/* =========================
+   Project video
+========================= */
 
 .project__image--video {
   background: #111111;
+
   overflow: hidden;
 }
 
@@ -795,7 +870,9 @@ button:focus-visible {
   object-fit: cover;
 }
 
-/* About */
+/* =========================
+   About
+========================= */
 
 .about__content {
   max-width: 900px;
@@ -821,7 +898,9 @@ button:focus-visible {
   line-height: 1.6;
 }
 
-/* Skills */
+/* =========================
+   Skills
+========================= */
 
 .skills__grid {
   display: grid;
@@ -844,7 +923,6 @@ button:focus-visible {
 
   font-size: 20px;
   font-weight: 500;
-
   line-height: 1.2;
 
   letter-spacing: -0.02em;
@@ -879,13 +957,14 @@ button:focus-visible {
   grid-column: 1 / -1;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 
 .footer {
   padding: 100px 0 50px;
 
   background: var(--footer-bg);
-
   color: var(--footer-text);
 
   transition:
@@ -907,7 +986,6 @@ button:focus-visible {
   margin: 0;
 
   font-size: clamp(48px, 7vw, 90px);
-
   line-height: 0.95;
 
   letter-spacing: -0.05em;
@@ -923,7 +1001,9 @@ button:focus-visible {
   font-size: 18px;
 }
 
-/* Footer links */
+/* =========================
+   Footer links
+========================= */
 
 .footer__links {
   display: flex;
@@ -959,7 +1039,9 @@ button:focus-visible {
   opacity: 0.85;
 }
 
-/* Footer icon */
+/* =========================
+   Footer icon
+========================= */
 
 .footer__icon {
   position: relative;
@@ -983,7 +1065,9 @@ button:focus-visible {
   overflow: visible;
 }
 
-/* GitHub */
+/* =========================
+   GitHub
+========================= */
 
 .footer__link--github .footer__icon {
   transition:
@@ -1013,9 +1097,14 @@ button:focus-visible {
   }
 }
 
-/* Telegram */
+/* =========================
+   Telegram
+========================= */
 
 .footer__icon-svg--telegram {
+  width: 22px;
+  height: 22px;
+
   overflow: visible;
 }
 
@@ -1068,23 +1157,31 @@ button:focus-visible {
 @keyframes telegramLine {
   0% {
     opacity: 0.7;
+
     transform: translate(0, 0);
   }
 
   40% {
     opacity: 0.35;
+
     transform: translate(-2px, 3px);
   }
 
   100% {
     opacity: 0;
+
     transform: translate(-5px, 7px);
   }
 }
 
-/* Email */
+/* =========================
+   Email
+========================= */
 
 .footer__icon-svg--email {
+  width: 26px;
+  height: 22px;
+
   overflow: visible;
 }
 
@@ -1169,7 +1266,9 @@ button:focus-visible {
   }
 }
 
-/* Footer link text */
+/* =========================
+   Footer link text
+========================= */
 
 .footer__link-text {
   display: inline-block;
@@ -1181,7 +1280,9 @@ button:focus-visible {
   transform: translateX(2px);
 }
 
-/* Copyright */
+/* =========================
+   Copyright
+========================= */
 
 .footer__copyright {
   margin: 100px 0 0;
@@ -1191,7 +1292,9 @@ button:focus-visible {
   font-size: 13px;
 }
 
-/* Tablet */
+/* =========================
+   Tablet
+========================= */
 
 @media (max-width: 768px) {
   :root {
@@ -1230,6 +1333,15 @@ button:focus-visible {
 
   .hero__color-layer {
     font-size: clamp(48px, 14vw, 80px);
+  }
+
+  /* Восстановлено */
+  .hero__lens {
+    animation-name: lensPositionTablet;
+  }
+
+  .hero__color-layer {
+    animation-name: colorRevealTablet;
   }
 
   .hero__text {
@@ -1302,6 +1414,7 @@ button:focus-visible {
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
     align-items: stretch;
 
     gap: 12px;
@@ -1314,14 +1427,16 @@ button:focus-visible {
 
     width: 100%;
     height: auto;
+
     max-width: none;
 
     aspect-ratio: 1 / 1;
+
     object-fit: contain;
 
     padding: 8px;
 
-    background: #fff;
+    background: #ffffff;
   }
 
   .footer {
@@ -1343,7 +1458,9 @@ button:focus-visible {
   }
 }
 
-/* Tablet lens movement */
+/* =========================
+   Tablet lens movement
+========================= */
 
 @keyframes lensPositionTablet {
   0% {
@@ -1379,31 +1496,45 @@ button:focus-visible {
 
 @keyframes colorRevealTablet {
   0% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 10% 18%
+    );
   }
 
   20% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 28% 22%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 28% 22%
+    );
   }
 
   40% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 50% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 50% 18%
+    );
   }
 
   60% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 72% 48%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 72% 48%
+    );
   }
 
   80% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 42% 72%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 42% 72%
+    );
   }
 
   100% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 10% 18%
+    );
   }
 }
 
-/* Mobile */
+/* =========================
+   Mobile
+========================= */
 
 @media (max-width: 425px) {
   :root {
@@ -1439,6 +1570,15 @@ button:focus-visible {
     font-size: clamp(34px, 13vw, 64px);
   }
 
+  /* Восстановлено */
+  .hero__lens {
+    animation-name: lensPositionMobile;
+  }
+
+  .hero__color-layer {
+    animation-name: colorRevealMobile;
+  }
+
   .hero__lens {
     border-width: 1.5px;
   }
@@ -1463,9 +1603,16 @@ button:focus-visible {
   .footer__title {
     font-size: clamp(42px, 12vw, 64px);
   }
+
+  .footer__icon-svg--email {
+    width: 26px;
+    height: 22px;
+  }
 }
 
-/* Mobile lens movement */
+/* =========================
+   Mobile lens movement
+========================= */
 
 @keyframes lensPositionMobile {
   0% {
@@ -1501,31 +1648,45 @@ button:focus-visible {
 
 @keyframes colorRevealMobile {
   0% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 12% 20%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 12% 20%
+    );
   }
 
   20% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 36% 18%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 36% 18%
+    );
   }
 
   40% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 68% 22%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 68% 22%
+    );
   }
 
   60% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 82% 55%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 82% 55%
+    );
   }
 
   80% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 48% 78%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 48% 78%
+    );
   }
 
   100% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 12% 20%);
+    clip-path: circle(
+      calc(var(--lens-size) / 2) at 12% 20%
+    );
   }
 }
 
-/* Reduced motion */
+/* =========================
+   Reduced motion
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -1537,7 +1698,6 @@ button:focus-visible {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-
     transition-duration: 0.01ms !important;
   }
 
