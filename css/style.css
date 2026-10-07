@@ -24,7 +24,6 @@
   --line: #2c2c2c;
   --accent: #f5f5f2;
 
-  /* Важно: карточки остаются тёмными */
   --white: #1c1c1c;
 
   --notes-bg: #242424;
@@ -40,12 +39,15 @@
    Reset
 ========================= */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -68,7 +70,8 @@ a {
   text-decoration: none;
 }
 
-img {
+img,
+video {
   display: block;
   max-width: 100%;
 }
@@ -77,7 +80,6 @@ button {
   font: inherit;
 }
 
-/* Не показываем рамку/outline у кнопки темы после клика */
 button:focus {
   outline: none;
 }
@@ -98,6 +100,7 @@ a:focus-visible {
 
 .header {
   padding: 28px 0;
+
   border-bottom: 1px solid var(--line);
 
   transition: border-color 0.3s ease;
@@ -106,13 +109,18 @@ a:focus-visible {
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   gap: 30px;
+
+  min-width: 0;
 }
 
 .logo {
+  flex: 0 0 auto;
+
   font-size: 24px;
   font-weight: 700;
+
   letter-spacing: -0.04em;
 
   transition: opacity 0.2s ease;
@@ -124,6 +132,8 @@ a:focus-visible {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
+
   gap: 28px;
 
   margin-left: auto;
@@ -132,6 +142,8 @@ a:focus-visible {
 }
 
 .nav a {
+  white-space: nowrap;
+
   transition: opacity 0.2s ease;
 }
 
@@ -148,14 +160,13 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
 
-  flex: 0 0 42px;
-
   width: 42px;
   height: 42px;
 
+  flex: 0 0 42px;
+
   padding: 0;
 
-  /* Никакой видимой рамки */
   border: 0;
   border-radius: 50%;
 
@@ -183,11 +194,7 @@ a:focus-visible {
   transform: scale(0.92);
 }
 
-.theme-toggle:focus {
-  outline: none;
-  box-shadow: none;
-}
-
+.theme-toggle:focus,
 .theme-toggle:focus-visible {
   outline: none;
   box-shadow: none;
@@ -211,9 +218,13 @@ a:focus-visible {
 
 .hero {
   position: relative;
+
   overflow: hidden;
+  overflow: clip;
 
   padding: 90px 0 110px;
+
+  isolation: isolate;
 }
 
 .hero__heading {
@@ -246,6 +257,8 @@ a:focus-visible {
 
   width: min(900px, 100%);
   max-width: 900px;
+
+  min-width: 0;
 }
 
 .hero__title {
@@ -253,13 +266,17 @@ a:focus-visible {
   z-index: 1;
 
   max-width: 900px;
+
   margin: 0;
 
   font-size: clamp(52px, 8vw, 110px);
   line-height: 0.95;
+
   letter-spacing: -0.06em;
 
   font-weight: 700;
+
+  overflow-wrap: break-word;
 }
 
 /* =========================
@@ -272,12 +289,16 @@ a:focus-visible {
 
   z-index: 2;
 
+  width: 100%;
+  height: 100%;
+
   margin: 0;
 
   color: var(--lens-color);
 
   font-size: clamp(52px, 8vw, 110px);
   line-height: 0.95;
+
   letter-spacing: -0.06em;
 
   font-weight: 700;
@@ -312,11 +333,17 @@ a:focus-visible {
   transform: translate(-50%, -50%);
 
   animation: lensPosition 10s ease-in-out infinite;
+
+  will-change: left, top;
 }
 
 [data-theme="dark"] .hero__lens {
   border-color: rgba(245, 245, 242, 0.3);
 }
+
+/* =========================
+   Desktop lens movement
+========================= */
 
 @keyframes lensPosition {
   0% {
@@ -335,7 +362,7 @@ a:focus-visible {
   }
 
   50% {
-    left: 88%;
+    left: 84%;
     top: 48%;
   }
 
@@ -369,7 +396,7 @@ a:focus-visible {
   }
 
   50% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 88% 48%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 84% 48%);
   }
 
   66% {
@@ -415,7 +442,7 @@ a:focus-visible {
 
   gap: 8px;
 
-  margin: 25px;
+  margin: 25px 0 0;
 
   color: var(--muted);
 
@@ -602,6 +629,8 @@ a:focus-visible {
 
   font-size: clamp(42px, 6vw, 72px);
   line-height: 0.95;
+
+  overflow-wrap: break-word;
 }
 
 /* =========================
@@ -634,12 +663,26 @@ a:focus-visible {
    Projects
 ========================= */
 
+.projects__list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  min-width: 0;
+}
+
 .project {
   display: grid;
 
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 1fr);
 
+  min-width: 0;
   min-height: 520px;
+
+  overflow: hidden;
 
   background: var(--white);
 
@@ -655,32 +698,252 @@ a:focus-visible {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
+/* =========================
+   Project image
+========================= */
+
 .project__image {
+  min-width: 0;
+  min-height: 0;
+
   width: 100%;
-  height: 100%;
+  height: auto;
 
   overflow: hidden;
 }
 
-.project__image img {
+/* =========================
+   Browser preview
+========================= */
+
+.project__image--browser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: 32px;
+
+  background: var(--notes-bg);
+
+  transition: background-color 0.3s ease;
+}
+
+.project__browser {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 720px;
+
+  aspect-ratio: 16 / 10;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project:hover .project__browser {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.16),
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.project__browser-bar {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 38px;
+
+  min-width: 0;
+
+  gap: 14px;
+
+  padding: 0 14px;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  background: #f7f7f7;
+}
+
+.project__browser-dots {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  flex: 0 0 auto;
+}
+
+.project__browser-dots span {
+  display: block;
+
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background: #c8c8c8;
+}
+
+.project__browser-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(260px, 60%);
+  max-width: 260px;
+  min-width: 0;
+
+  height: 23px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+
+  background: #ebebeb;
+
+  color: #999999;
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 0.04em;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.project__browser-screen {
+  position: relative;
+
+  flex: 1 1 auto;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.project__browser-screen img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: none;
+
+  object-fit: initial;
+  object-position: top center;
+
+  transition: transform 0.5s ease;
+}
+
+.project:hover .project__browser-screen img {
+  transform: translateY(-2px);
+}
+
+.project__browser-screen video {
+  display: block;
+
   width: 100%;
   height: 100%;
 
   object-fit: cover;
+  object-position: center;
 }
 
-.project__image--cover img {
-  transition: transform 0.5s ease;
+/* =========================
+   Notes App
+========================= */
+
+.project__image--notes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
+
+  background: var(--notes-bg);
+
+  transition: background-color 0.3s ease;
 }
 
-.project:hover .project__image--cover img {
-  transform: scale(1.035);
+.project__screens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  width: 100%;
+  max-width: 320px;
+
+  min-width: 0;
 }
+
+.project__screens img {
+  display: block;
+
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: contain;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project__screens img:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================
+   Project content
+========================= */
 
 .project__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  min-width: 0;
 
   padding: 60px;
 }
@@ -705,12 +968,16 @@ a:focus-visible {
 }
 
 .project__title {
+  max-width: 100%;
+
   margin: 0;
 
   font-size: 48px;
   line-height: 0.95;
 
   letter-spacing: -0.04em;
+
+  overflow-wrap: anywhere;
 }
 
 .project__description {
@@ -721,6 +988,8 @@ a:focus-visible {
   color: var(--muted);
 
   font-size: 17px;
+
+  overflow-wrap: break-word;
 }
 
 .project__stack {
@@ -730,12 +999,52 @@ a:focus-visible {
 
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
+  overflow-wrap: break-word;
+}
+
+.project__features {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px 20px;
+
+  margin: 0 0 40px;
+  padding: 0;
+
+  list-style: none;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+.project__features li {
+  position: relative;
+
+  min-width: 0;
+
+  padding-left: 16px;
+
+  overflow-wrap: break-word;
+}
+
+.project__features li::before {
+  content: "◎";
+
+  position: absolute;
+
+  left: 0;
 }
 
 .project__links {
   display: flex;
+  flex-wrap: wrap;
 
   gap: 24px;
+
+  min-width: 0;
 }
 
 .project__links a {
@@ -755,103 +1064,6 @@ a:focus-visible {
   opacity: 0.6;
 
   transform: translateY(-2px);
-}
-
-.project__features {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 8px 20px;
-
-  margin: 0 0 40px;
-  padding: 0;
-
-  list-style: none;
-
-  color: var(--muted);
-
-  font-size: 14px;
-}
-
-.project__features li {
-  position: relative;
-
-  padding-left: 16px;
-}
-
-.project__features li::before {
-  content: "◎";
-
-  position: absolute;
-
-  left: 0;
-}
-
-/* =========================
-   Notes App
-========================= */
-
-.project__image--notes {
-  padding: 32px;
-
-  background: var(--notes-bg);
-
-  transition: background-color 0.3s ease;
-}
-
-.project__screens {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 24px;
-
-  width: 100%;
-}
-
-.project__screens img {
-  width: min(100%, 320px);
-
-  aspect-ratio: 1 / 1;
-
-  object-fit: contain;
-
-  padding: 12px;
-
-  /* ВСЕГДА белый */
-  background: #ffffff;
-
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.project__screens img:hover {
-  transform: translateY(-4px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
-}
-
-/* =========================
-   Project video
-========================= */
-
-.project__image--video {
-  background: #111111;
-
-  overflow: hidden;
-}
-
-.project__image--video video {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
 }
 
 /* =========================
@@ -892,10 +1104,14 @@ a:focus-visible {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 70px 80px;
+
+  min-width: 0;
 }
 
 .skills__group {
   width: 100%;
+
+  min-width: 0;
 
   border-top: 1px solid var(--line);
 }
@@ -910,6 +1126,8 @@ a:focus-visible {
   line-height: 1.2;
 
   letter-spacing: -0.02em;
+
+  overflow-wrap: break-word;
 }
 
 .skills__list {
@@ -928,6 +1146,8 @@ a:focus-visible {
 .skills__list li {
   width: 100%;
 
+  min-width: 0;
+
   padding: 14px 0;
 
   border-top: 1px solid var(--line);
@@ -935,6 +1155,8 @@ a:focus-visible {
   color: var(--muted);
 
   font-size: 15px;
+
+  overflow-wrap: break-word;
 }
 
 .skills__list li:last-child:nth-child(odd) {
@@ -973,6 +1195,8 @@ a:focus-visible {
   line-height: 0.95;
 
   letter-spacing: -0.05em;
+
+  overflow-wrap: break-word;
 }
 
 .footer__text {
@@ -1280,6 +1504,25 @@ a:focus-visible {
    Tablet
 ========================= */
 
+@media (max-width: 900px) {
+  .project__content {
+    padding: 40px;
+  }
+
+  .project__title {
+    font-size: 42px;
+  }
+
+  .project__image--browser,
+  .project__image--notes {
+    padding: 24px;
+  }
+}
+
+/* =========================
+   Tablet / Mobile
+========================= */
+
 @media (max-width: 768px) {
   :root {
     --lens-size: 140px;
@@ -1289,23 +1532,49 @@ a:focus-visible {
     width: min(100% - 32px, 1180px);
   }
 
+  /* Header */
+
   .header {
     padding: 20px 0;
   }
 
   .header .container {
-    align-items: center;
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    gap: 16px;
+  }
+
+  .logo {
+    min-width: 0;
+
+    font-size: 22px;
   }
 
   .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    grid-column: 1 / -1;
+    grid-row: 2;
 
-    gap: 12px 16px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    gap: 10px 18px;
 
     font-size: 13px;
   }
+
+  .theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* Hero */
 
   .hero {
     padding: 70px 0 90px;
@@ -1319,7 +1588,6 @@ a:focus-visible {
     font-size: clamp(48px, 14vw, 80px);
   }
 
-  /* Восстановлено */
   .hero__lens {
     animation-name: lensPositionTablet;
   }
@@ -1338,6 +1606,8 @@ a:focus-visible {
     margin-top: 20px;
     margin-bottom: 32px;
   }
+
+  /* Sections */
 
   .projects {
     padding: 70px 0;
@@ -1358,35 +1628,79 @@ a:focus-visible {
     font-size: clamp(42px, 9vw, 64px);
   }
 
-  .skills__grid {
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-  }
-
-  .project__image--video {
-    height: 300px;
-  }
+  /* Projects */
 
   .project {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 0;
   }
 
   .project__image {
-    height: 300px;
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
   }
 
-  .project__content {
-    padding: 36px 24px 44px;
+  .project__image--browser {
+    display: flex;
+
+    min-height: 0;
+
+    padding: 20px;
   }
 
-  .project__title {
-    font-size: 40px;
+  .project__browser {
+    width: 100%;
+    max-width: none;
+
+    aspect-ratio: 16 / 10;
+
+    border-radius: 9px;
   }
 
-  .project__features {
-    grid-template-columns: 1fr;
+  .project__browser-bar {
+    flex-basis: 34px;
+
+    gap: 10px;
+
+    padding: 0 10px;
   }
+
+  .project__browser-dots {
+    gap: 4px;
+  }
+
+  .project__browser-dots span {
+    width: 6px;
+    height: 6px;
+
+    flex-basis: 6px;
+  }
+
+  .project__browser-address {
+    width: min(200px, 60%);
+
+    height: 20px;
+
+    font-size: 9px;
+  }
+
+  .project__browser-screen img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project__browser-screen video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  /* Notes */
 
   .project__image--notes {
     height: auto;
@@ -1399,29 +1713,63 @@ a:focus-visible {
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    align-items: stretch;
+    align-items: start;
 
-    gap: 12px;
+    gap: 16px;
 
     width: 100%;
+    max-width: none;
   }
 
   .project__screens img {
-    display: block;
-
     width: 100%;
-    height: auto;
-
     max-width: none;
+    height: auto;
 
     aspect-ratio: 1 / 1;
 
-    object-fit: contain;
-
     padding: 8px;
-
-    background: #ffffff;
   }
+
+  /* Content */
+
+  .project__content {
+    width: 100%;
+
+    padding: 36px 24px 44px;
+  }
+
+  .project__title {
+    font-size: 40px;
+  }
+
+  .project__description {
+    max-width: none;
+
+    font-size: 16px;
+  }
+
+  .project__features {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .project__stack {
+    margin-bottom: 32px;
+
+    line-height: 1.5;
+  }
+
+  /* Skills */
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  /* Footer */
 
   .footer {
     padding: 70px 0 40px;
@@ -1448,12 +1796,12 @@ a:focus-visible {
 
 @keyframes lensPositionTablet {
   0% {
-    left: 10%;
+    left: 14%;
     top: 18%;
   }
 
   20% {
-    left: 28%;
+    left: 30%;
     top: 22%;
   }
 
@@ -1468,23 +1816,23 @@ a:focus-visible {
   }
 
   80% {
-    left: 42%;
+    left: 44%;
     top: 72%;
   }
 
   100% {
-    left: 10%;
+    left: 14%;
     top: 18%;
   }
 }
 
 @keyframes colorRevealTablet {
   0% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 14% 18%);
   }
 
   20% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 28% 22%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 30% 22%);
   }
 
   40% {
@@ -1496,11 +1844,11 @@ a:focus-visible {
   }
 
   80% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 42% 72%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 44% 72%);
   }
 
   100% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 10% 18%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 14% 18%);
   }
 }
 
@@ -1513,12 +1861,24 @@ a:focus-visible {
     --lens-size: 105px;
   }
 
+  .container {
+    width: min(100% - 24px, 1180px);
+  }
+
+  /* Header */
+
   .header .container {
-    gap: 14px;
+    gap: 12px;
   }
 
   .logo {
     font-size: 20px;
+  }
+
+  .nav {
+    gap: 9px 14px;
+
+    font-size: 12px;
   }
 
   .theme-toggle {
@@ -1530,29 +1890,56 @@ a:focus-visible {
     font-size: 18px;
   }
 
+  /* Hero */
+
   .hero {
     padding-top: 60px;
+
+    overflow: hidden;
+    overflow: clip;
+  }
+
+  .hero__title-wrapper {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: visible;
   }
 
   .hero__title {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(34px, 13vw, 64px);
+    line-height: 0.95;
   }
 
   .hero__color-layer {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(34px, 13vw, 64px);
-  }
+    line-height: 0.95;
 
-  /* Восстановлено */
-  .hero__lens {
-    animation-name: lensPositionMobile;
-  }
-
-  .hero__color-layer {
+    /*
+      ВАЖНО:
+      раньше здесь оставалась tablet-анимация.
+      Теперь красный слой двигается
+      абсолютно синхронно с кругом.
+    */
     animation-name: colorRevealMobile;
   }
 
   .hero__lens {
+    animation-name: lensPositionMobile;
+
     border-width: 1.5px;
+  }
+
+  .hero__text {
+    max-width: 100%;
+
+    font-size: 15px;
   }
 
   .hero__status {
@@ -1560,10 +1947,54 @@ a:focus-visible {
     margin-bottom: 30px;
   }
 
-  .nav {
-    display: grid;
+  /* Projects */
 
-    gap: 10px;
+  .projects__list {
+    gap: 16px;
+  }
+
+  .project__image--browser {
+    padding: 16px;
+  }
+
+  .project__browser {
+    width: 100%;
+    max-width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    border-radius: 7px;
+  }
+
+  .project__browser-bar {
+    flex-basis: 30px;
+
+    gap: 8px;
+
+    padding: 0 8px;
+  }
+
+  .project__browser-dots {
+    gap: 3px;
+  }
+
+  .project__browser-dots span {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+  }
+
+  .project__browser-address {
+    width: min(140px, 60%);
+
+    height: 18px;
+
+    font-size: 8px;
+  }
+
+  .project__image--notes {
+    padding: 16px;
   }
 
   .project__screens {
@@ -1571,6 +2002,46 @@ a:focus-visible {
 
     gap: 16px;
   }
+
+  .project__screens img {
+    width: min(100%, 300px);
+
+    margin: 0 auto;
+  }
+
+  .project__content {
+    padding: 32px 20px 38px;
+  }
+
+  .project__heading {
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .project__number {
+    font-size: 12px;
+  }
+
+  .project__title {
+    font-size: 36px;
+  }
+
+  .project__description {
+    font-size: 15px;
+  }
+
+  .project__stack {
+    font-size: 11px;
+
+    letter-spacing: 0.06em;
+  }
+
+  .project__links {
+    gap: 20px;
+  }
+
+  /* Footer */
 
   .footer__title {
     font-size: clamp(42px, 12vw, 64px);
@@ -1586,61 +2057,134 @@ a:focus-visible {
    Mobile lens movement
 ========================= */
 
+/*
+  Здесь специально уменьшена амплитуда движения.
+
+  Старый вариант:
+  12% → 36% → 68% → 82% → 48%
+
+  На узком экране 82% + половина круга
+  давали выход за границу.
+
+  Новый вариант:
+  18% → 35% → 64% → 74% → 45%
+
+  Круг остается внутри hero.
+*/
+
 @keyframes lensPositionMobile {
   0% {
-    left: 12%;
+    left: 18%;
     top: 20%;
   }
 
   20% {
-    left: 36%;
+    left: 35%;
     top: 18%;
   }
 
   40% {
-    left: 68%;
+    left: 64%;
     top: 22%;
   }
 
   60% {
-    left: 82%;
-    top: 55%;
+    left: 74%;
+    top: 52%;
   }
 
   80% {
-    left: 48%;
-    top: 78%;
+    left: 45%;
+    top: 76%;
   }
 
   100% {
-    left: 12%;
+    left: 18%;
     top: 20%;
   }
 }
 
 @keyframes colorRevealMobile {
   0% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 12% 20%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 18% 20%);
   }
 
   20% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 36% 18%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 35% 18%);
   }
 
   40% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 68% 22%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 64% 22%);
   }
 
   60% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 82% 55%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 74% 52%);
   }
 
   80% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 48% 78%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 45% 76%);
   }
 
   100% {
-    clip-path: circle(calc(var(--lens-size) / 2) at 12% 20%);
+    clip-path: circle(calc(var(--lens-size) / 2) at 18% 20%);
+  }
+}
+
+/* =========================
+   Extra small screens
+========================= */
+
+@media (max-width: 360px) {
+  .container {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero__title,
+  .hero__color-layer {
+    font-size: clamp(32px, 12.5vw, 48px);
+  }
+
+  .hero__lens {
+    --lens-size: 92px;
+
+    width: var(--lens-size);
+    height: var(--lens-size);
+  }
+
+  .nav {
+    gap: 8px 12px;
+  }
+
+  .project__image--browser {
+    padding: 12px;
+  }
+
+  .project__browser-bar {
+    flex-basis: 28px;
+
+    gap: 6px;
+
+    padding: 0 7px;
+  }
+
+  .project__browser-address {
+    width: min(120px, 58%);
+
+    height: 17px;
+
+    font-size: 7px;
+  }
+
+  .project__content {
+    padding: 30px 18px 36px;
+  }
+
+  .project__title {
+    font-size: 32px;
   }
 }
 
