@@ -1,23 +1,26 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en" data-lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="theme-color" content="#f5f5f2" />
 
-    <title>Artemio — Junior Frontend Developer</title>
+    <title>Kutelev Artem — Junior Frontend Developer</title>
 
     <meta
       name="description"
-      content="Портфолио Artemio — Junior Frontend Developer. HTML, CSS, JavaScript, TypeScript и React."
+      content="Portfolio of Kutelev Artem — Junior Frontend Developer. HTML, CSS, JavaScript, TypeScript and React."
     />
 
-    <meta property="og:title" content="Artemio — Junior Frontend Developer" />
+    <meta
+      property="og:title"
+      content="Kutelev Artem — Junior Frontend Developer"
+    />
 
     <meta
       property="og:description"
-      content="Портфолио Junior Frontend Developer — веб-интерфейсы, React, TypeScript, HTML и SCSS."
+      content="Junior Frontend Developer portfolio — responsive web interfaces, React, TypeScript, HTML and SCSS."
     />
 
     <meta
@@ -31,6 +34,7 @@
 
     <script>
       const savedTheme = localStorage.getItem("theme");
+
       const systemDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
       ).matches;
@@ -38,31 +42,62 @@
       const theme = savedTheme || (systemDark ? "dark" : "light");
 
       document.documentElement.dataset.theme = theme;
+
+      const initialLanguage = localStorage.getItem("language") || "en";
+
+      document.documentElement.lang = initialLanguage;
+      document.documentElement.dataset.lang = initialLanguage;
     </script>
   </head>
 
   <body>
+    <!-- Header -->
+
     <header class="header">
       <div class="container">
-        <a class="logo" href="./" aria-label="Artemio — главная">
+        <a class="logo" href="./" aria-label="Kutelev Artem — home">
           Kutelev Artem
         </a>
 
-        <nav class="nav" aria-label="Основная навигация">
-          <a href="#projects">Проекты</a>
-          <a href="#about">Обо мне</a>
-          <a href="#skills">Навыки</a>
-          <a href="#contacts">Контакты</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#projects" data-i18n="nav.projects"> Projects </a>
+
+          <a href="#about" data-i18n="nav.about"> About </a>
+
+          <a href="#skills" data-i18n="nav.skills"> Skills </a>
+
+          <a href="#contacts" data-i18n="nav.contacts"> Contact </a>
         </nav>
 
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-label="Переключить тему"
-          aria-pressed="false"
-        >
-          <span class="theme-toggle__icon" aria-hidden="true">☾</span>
-        </button>
+        <div class="header__actions">
+          <!-- Language -->
+
+          <button
+            class="language-toggle"
+            type="button"
+            aria-label="Switch language"
+            aria-pressed="false"
+          >
+            <span class="language-toggle__current"> EN </span>
+
+            <span class="language-toggle__separator" aria-hidden="true">
+              /
+            </span>
+
+            <span class="language-toggle__alternative"> RU </span>
+          </button>
+
+          <!-- Theme -->
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle__icon" aria-hidden="true"> ☾ </span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -72,17 +107,25 @@
       <section class="hero">
         <div class="container">
           <div class="hero__heading">
-            <p class="hero__subtitle">Junior Frontend Developer</p>
+            <p class="hero__subtitle" data-i18n="hero.subtitle">
+              Junior Frontend Developer
+            </p>
 
             <div class="hero__title-wrapper">
               <h1 class="hero__title">
-                Создаю современные<br />
-                и адаптивные веб-интерфейсы.
+                <span data-i18n="hero.title">
+                  I build modern<br />
+                  and responsive web interfaces.
+                </span>
               </h1>
 
-              <div class="hero__color-layer" aria-hidden="true">
-                Создаю современные<br />
-                и адаптивные веб-интерфейсы.
+              <div
+                class="hero__color-layer"
+                aria-hidden="true"
+                data-i18n="hero.title"
+              >
+                I build modern<br />
+                and responsive web interfaces.
               </div>
 
               <div class="hero__lens" aria-hidden="true"></div>
@@ -93,12 +136,13 @@
 
           <div class="hero__block">
             <p class="hero__status">
-              <span class="hero__status-dot"></span>
-              Открыт к работе
+              <span class="hero__status-dot" aria-hidden="true"></span>
+
+              <span data-i18n="hero.status"> Open to work </span>
             </p>
 
             <a class="button" href="#projects">
-              <span>Смотреть проекты</span>
+              <span data-i18n="hero.button"> View projects </span>
             </a>
           </div>
         </div>
@@ -109,8 +153,11 @@
       <section class="projects" id="projects">
         <div class="container">
           <div class="section__heading reveal">
-            <p class="section__subtitle">Мои работы</p>
-            <h2 class="section__title">Проекты</h2>
+            <p class="section__subtitle" data-i18n="projects.subtitle">
+              Selected work
+            </p>
+
+            <h2 class="section__title" data-i18n="projects.title">Projects</h2>
           </div>
 
           <div class="projects__list">
@@ -132,7 +179,7 @@
                   <div class="project__browser-screen">
                     <img
                       src="./images/sminex.png"
-                      alt="Sminex — адаптивный лендинг жилого комплекса"
+                      alt="Sminex — responsive residential complex landing page"
                       fetchpriority="high"
                     />
                   </div>
@@ -146,21 +193,31 @@
                   <h3 class="project__title">Sminex</h3>
                 </div>
 
-                <p class="project__description">
-                  Адаптивный лендинг жилого комплекса, сверстанный по готовому
-                  дизайну. Реализовал структуру страницы, адаптивную верстку и
-                  оптимизацию изображений.
+                <p
+                  class="project__description"
+                  data-i18n="projects.sminex.description"
+                >
+                  Responsive residential complex landing page built from a
+                  provided design. Implemented page structure, responsive layout
+                  and image optimization.
                 </p>
 
                 <p class="project__stack">
-                  HTML5 · SCSS · БЭМ · SVG · WebP · Git
+                  HTML5 · SCSS · BEM · SVG · WebP · Git
                 </p>
 
                 <ul class="project__features">
-                  <li>Адаптивная верстка</li>
-                  <li>БЭМ</li>
-                  <li>SVG-спрайт</li>
-                  <li>Оптимизация изображений</li>
+                  <li data-i18n="projects.sminex.feature1">
+                    Responsive layout
+                  </li>
+
+                  <li>BEM</li>
+
+                  <li data-i18n="projects.sminex.feature3">SVG sprite</li>
+
+                  <li data-i18n="projects.sminex.feature4">
+                    Image optimization
+                  </li>
                 </ul>
 
                 <div class="project__links">
@@ -190,14 +247,14 @@
                 <div class="project__screens">
                   <img
                     src="./images/notes-auth.png"
-                    alt="Personal Notes App — авторизация"
+                    alt="Personal Notes App — authentication"
                     loading="lazy"
                     decoding="async"
                   />
 
                   <img
                     src="./images/notes-list.png"
-                    alt="Personal Notes App — список заметок"
+                    alt="Personal Notes App — notes list"
                     loading="lazy"
                     decoding="async"
                   />
@@ -211,10 +268,12 @@
                   <h3 class="project__title">Personal Notes App</h3>
                 </div>
 
-                <p class="project__description">
-                  Full-stack приложение для регистрации пользователей,
-                  авторизации и создания личных заметок с сохранением данных на
-                  сервере.
+                <p
+                  class="project__description"
+                  data-i18n="projects.notes.description"
+                >
+                  Full-stack application for user registration, authentication
+                  and personal notes with server-side data storage.
                 </p>
 
                 <p class="project__stack">
@@ -222,10 +281,15 @@
                 </p>
 
                 <ul class="project__features">
-                  <li>Регистрация и авторизация</li>
-                  <li>JWT + Cookies</li>
-                  <li>REST API</li>
-                  <li>Сохранение заметок</li>
+                  <li data-i18n="projects.notes.feature1">
+                    User registration and authentication
+                  </li>
+
+                  <li data-i18n="projects.notes.feature2">JWT + Cookies</li>
+
+                  <li data-i18n="projects.notes.feature3">REST API</li>
+
+                  <li data-i18n="projects.notes.feature4">Persistent notes</li>
                 </ul>
 
                 <div class="project__links">
@@ -263,7 +327,7 @@
                       loop
                       playsinline
                       preload="metadata"
-                      aria-label="Whitemark — анимационный прелоадер"
+                      aria-label="Whitemark — animated preloader"
                     ></video>
                   </div>
                 </div>
@@ -276,21 +340,33 @@
                   <h3 class="project__title">Whitemark</h3>
                 </div>
 
-                <p class="project__description">
-                  Адаптивная страница контактов с анимационным прелоадером. При
-                  первой загрузке последовательно появляются логотипы компаний,
-                  после чего прелоадер плавно исчезает и открывается основной
-                  интерфейс.
+                <p
+                  class="project__description"
+                  data-i18n="projects.whitemark.description"
+                >
+                  Responsive contact page with an animated preloader. Company
+                  logos appear sequentially on the initial load, followed by a
+                  smooth transition to the main interface.
                 </p>
 
-                <p class="project__stack">HTML5 · SCSS · БЭМ · SVG · Git</p>
+                <p class="project__stack">HTML5 · SCSS · BEM · SVG · Git</p>
 
                 <ul class="project__features">
-                  <li>Анимационный прелоадер</li>
-                  <li>SVG-спрайт</li>
-                  <li>CSS-анимации</li>
-                  <li>Адаптивная верстка</li>
-                  <li>GitHub Pages</li>
+                  <li data-i18n="projects.whitemark.feature1">
+                    Animated preloader
+                  </li>
+
+                  <li data-i18n="projects.whitemark.feature2">SVG sprite</li>
+
+                  <li data-i18n="projects.whitemark.feature3">
+                    CSS animations
+                  </li>
+
+                  <li data-i18n="projects.whitemark.feature4">
+                    Responsive layout
+                  </li>
+
+                  <li data-i18n="projects.whitemark.feature5">GitHub Pages</li>
                 </ul>
 
                 <div class="project__links">
@@ -331,7 +407,7 @@
                   <div class="project__browser-screen">
                     <img
                       src="./images/w-wave.png"
-                      alt="W-Wave — адаптивный одностраничный сайт"
+                      alt="W-Wave — responsive one-page website"
                       loading="lazy"
                       decoding="async"
                     />
@@ -346,18 +422,23 @@
                   <h3 class="project__title">W-Wave</h3>
                 </div>
 
-                <p class="project__description">
-                  Адаптивный одностраничный сайт, выполненный по готовому
-                  дизайну. Реализовал структуру страницы, адаптивную верстку и
-                  интерактивные элементы интерфейса.
+                <p
+                  class="project__description"
+                  data-i18n="projects.wwave.description"
+                >
+                  Responsive one-page website built from a provided design.
+                  Implemented the page structure, responsive layout and
+                  interactive interface elements.
                 </p>
 
-                <p class="project__stack">HTML5 · CSS3 · БЭМ · Git</p>
+                <p class="project__stack">HTML5 · CSS3 · BEM · Git</p>
 
                 <ul class="project__features">
-                  <li>Адаптивная верстка</li>
-                  <li>БЭМ</li>
-                  <li>SCSS</li>
+                  <li data-i18n="projects.wwave.feature1">Responsive layout</li>
+
+                  <li data-i18n="projects.wwave.feature2">BEM</li>
+
+                  <li data-i18n="projects.wwave.feature3">SCSS</li>
                 </ul>
 
                 <div class="project__links">
@@ -398,7 +479,7 @@
                   <div class="project__browser-screen">
                     <img
                       src="./images/evcalid.png"
-                      alt="Evcalid — адаптивный одностраничный сайт"
+                      alt="Evcalid — responsive one-page website"
                       loading="lazy"
                       decoding="async"
                     />
@@ -413,19 +494,27 @@
                   <h3 class="project__title">Evcalid</h3>
                 </div>
 
-                <p class="project__description">
-                  Адаптивный одностраничный сайт, выполненный в рамках практики
-                  frontend-вёрстки. Основное внимание уделено структуре
-                  страницы, адаптивности и аккуратной реализации интерфейса.
+                <p
+                  class="project__description"
+                  data-i18n="projects.evcalid.description"
+                >
+                  Responsive one-page website built as part of frontend layout
+                  practice. The project focuses on page structure,
+                  responsiveness and clean interface implementation.
                 </p>
 
-                <p class="project__stack">HTML5 · CSS3 · БЭМ · Git</p>
+                <p class="project__stack">HTML5 · CSS3 · BEM · Git</p>
 
                 <ul class="project__features">
-                  <li>Адаптивная верстка</li>
-                  <li>Семантический HTML</li>
-                  <li>SCSS</li>
-                  <li>БЭМ</li>
+                  <li data-i18n="projects.evcalid.feature1">
+                    Responsive layout
+                  </li>
+
+                  <li data-i18n="projects.evcalid.feature2">Semantic HTML</li>
+
+                  <li data-i18n="projects.evcalid.feature3">SCSS</li>
+
+                  <li data-i18n="projects.evcalid.feature4">BEM</li>
                 </ul>
 
                 <div class="project__links">
@@ -466,7 +555,7 @@
                   <div class="project__browser-screen">
                     <img
                       src="./images/lagoona.png"
-                      alt="Lagoona — одностраничный сайт гостиничного комплекса"
+                      alt="Lagoona — hotel one-page website"
                       loading="lazy"
                       decoding="async"
                     />
@@ -481,20 +570,27 @@
                   <h3 class="project__title">Lagoona</h3>
                 </div>
 
-                <p class="project__description">
-                  Одностраничный статичный сайт гостиничного комплекса. Проект
-                  выполнен для практики HTML/CSS-вёрстки, работы с блоками,
-                  карточками, позиционированием и структурой страницы.
+                <p
+                  class="project__description"
+                  data-i18n="projects.lagoona.description"
+                >
+                  Static one-page hotel website created for HTML/CSS layout
+                  practice. The project focuses on page structure, cards,
+                  positioning and classic layout techniques.
                 </p>
 
-                <p class="project__stack">HTML5 · CSS3 · Flexbox · БЭМ · Git</p>
+                <p class="project__stack">HTML5 · CSS3 · Flexbox · BEM · Git</p>
 
                 <ul class="project__features">
-                  <li>Семантический HTML</li>
-                  <li>Flexbox</li>
-                  <li>БЭМ</li>
-                  <li>Классическая вёрстка</li>
-                  <li>Без адаптивной верстки</li>
+                  <li data-i18n="projects.lagoona.feature1">Semantic HTML</li>
+
+                  <li data-i18n="projects.lagoona.feature2">Flexbox</li>
+
+                  <li data-i18n="projects.lagoona.feature3">BEM</li>
+
+                  <li data-i18n="projects.lagoona.feature4">Classic layout</li>
+
+                  <li data-i18n="projects.lagoona.feature5">Non-responsive</li>
                 </ul>
 
                 <div class="project__links">
@@ -525,26 +621,29 @@
       <section class="about" id="about">
         <div class="container">
           <div class="section__heading reveal">
-            <p class="section__subtitle">Обо мне</p>
-            <h2 class="section__title">Junior Frontend Developer</h2>
+            <p class="section__subtitle" data-i18n="about.subtitle">About me</p>
+
+            <h2 class="section__title" data-i18n="about.title">
+              Junior Frontend Developer
+            </h2>
           </div>
 
           <div class="about__content reveal">
-            <p class="about__text">
-              Junior Frontend Developer, создаю адаптивные веб-интерфейсы и
-              применяю знания на практических проектах.
+            <p class="about__text" data-i18n="about.intro">
+              Junior Frontend Developer focused on building responsive web
+              interfaces and improving my skills through practical projects.
             </p>
 
-            <p class="about__text about__text--small">
-              Работаю с HTML5, CSS3, SCSS, JavaScript, TypeScript и React.
-              Использую БЭМ, SVG-спрайты, SVG-анимации, адаптивную верстку,
-              оптимизацию изображений и современные подходы к организации кода.
+            <p class="about__text about__text--small" data-i18n="about.text1">
+              I work with HTML5, CSS3, SCSS, JavaScript, TypeScript and React. I
+              use BEM, SVG sprites, SVG animations, responsive design, image
+              optimization and modern approaches to code organization.
             </p>
 
-            <p class="about__text about__text--small">
-              Работаю с Git и GitHub, умею переводить макеты из Figma в готовые
-              интерфейсы и уделяю внимание производительности, семантике и
-              кроссбраузерности.
+            <p class="about__text about__text--small" data-i18n="about.text2">
+              I work with Git and GitHub, can turn Figma designs into working
+              interfaces and pay attention to performance, semantics and
+              cross-browser compatibility.
             </p>
           </div>
         </div>
@@ -555,8 +654,11 @@
       <section class="skills" id="skills">
         <div class="container">
           <div class="section__heading reveal">
-            <p class="section__subtitle">Технологии и инструменты</p>
-            <h2 class="section__title">Skills</h2>
+            <p class="section__subtitle" data-i18n="skills.subtitle">
+              Technologies & tools
+            </p>
+
+            <h2 class="section__title" data-i18n="skills.title">Skills</h2>
           </div>
 
           <div class="skills__grid">
@@ -641,13 +743,18 @@
     <footer class="footer" id="contacts">
       <div class="container">
         <div class="section__heading reveal">
-          <p class="section__subtitle">Контакты</p>
-          <h2 class="footer__title">Обсудим проект?</h2>
+          <p class="section__subtitle" data-i18n="footer.subtitle">Contact</p>
+
+          <h2 class="footer__title" data-i18n="footer.title">
+            Let's work together.
+          </h2>
         </div>
 
         <p class="footer__text reveal">
-          Открыт к предложениям о работе, freelance-задачам и интересным
-          frontend-проектам.
+          <span data-i18n="footer.text">
+            Open to job opportunities, freelance projects and interesting
+            frontend work.
+          </span>
         </p>
 
         <div class="footer__links reveal">
@@ -679,7 +786,7 @@
               </svg>
             </span>
 
-            <span class="footer__link-text">GitHub</span>
+            <span class="footer__link-text"> GitHub </span>
           </a>
 
           <!-- Telegram -->
@@ -716,7 +823,7 @@
               </svg>
             </span>
 
-            <span class="footer__link-text">Telegram</span>
+            <span class="footer__link-text"> Telegram </span>
           </a>
 
           <!-- Email -->
@@ -777,16 +884,16 @@
               </svg>
             </span>
 
-            <span class="footer__link-text">Email</span>
+            <span class="footer__link-text"> Email </span>
           </a>
         </div>
 
-        <p class="footer__copyright">
+        <p class="footer__copyright" data-i18n="footer.copyright">
           © 2026 Kutelev Artem. Frontend Developer.
         </p>
       </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script defer src="./js/script.js"></script>
   </body>
 </html>

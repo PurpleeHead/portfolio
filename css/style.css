@@ -152,6 +152,88 @@ a:focus-visible {
 }
 
 /* =========================
+   Header Actions
+========================= */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  flex: 0 0 auto;
+}
+
+/* =========================
+   Language Toggle
+========================= */
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 58px;
+  height: 42px;
+
+  padding: 0 8px;
+
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.language-toggle:hover {
+  color: var(--text);
+}
+
+.language-toggle__current {
+  color: var(--text);
+}
+
+.language-toggle__separator {
+  margin: 0 4px;
+
+  color: var(--line);
+}
+
+.language-toggle__alternative {
+  opacity: 0.45;
+}
+
+.language-toggle:hover .language-toggle__alternative {
+  opacity: 0.8;
+}
+
+[data-lang="ru"] .language-toggle__current {
+  color: var(--muted);
+  opacity: 0.45;
+}
+
+[data-lang="ru"] .language-toggle__alternative {
+  color: var(--text);
+  opacity: 1;
+}
+
+.language-toggle:focus,
+.language-toggle:focus-visible {
+  outline: none;
+}
+
+/* =========================
    Theme Toggle
 ========================= */
 
@@ -277,6 +359,11 @@ a:focus-visible {
   font-weight: 700;
 
   overflow-wrap: break-word;
+}
+
+.hero__title span,
+.hero__color-layer {
+  display: block;
 }
 
 /* =========================
@@ -1569,9 +1656,27 @@ a:focus-visible {
     font-size: 13px;
   }
 
-  .theme-toggle {
+  .header__actions {
     grid-column: 2;
     grid-row: 1;
+
+    gap: 4px;
+  }
+
+  .language-toggle {
+    min-width: 54px;
+    height: 38px;
+
+    padding: 0 4px;
+
+    font-size: 11px;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
   }
 
   /* Hero */
@@ -1881,11 +1986,21 @@ a:focus-visible {
     font-size: 12px;
   }
 
-  .theme-toggle {
-    width: 38px;
-    height: 38px;
+  .header__actions {
+    gap: 2px;
+  }
 
-    flex-basis: 38px;
+  .language-toggle {
+    min-width: 50px;
+
+    font-size: 10px;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
 
     font-size: 18px;
   }
@@ -1921,12 +2036,6 @@ a:focus-visible {
     font-size: clamp(34px, 13vw, 64px);
     line-height: 0.95;
 
-    /*
-      ВАЖНО:
-      раньше здесь оставалась tablet-анимация.
-      Теперь красный слой двигается
-      абсолютно синхронно с кругом.
-    */
     animation-name: colorRevealMobile;
   }
 
@@ -2056,21 +2165,6 @@ a:focus-visible {
 /* =========================
    Mobile lens movement
 ========================= */
-
-/*
-  Здесь специально уменьшена амплитуда движения.
-
-  Старый вариант:
-  12% → 36% → 68% → 82% → 48%
-
-  На узком экране 82% + половина круга
-  давали выход за границу.
-
-  Новый вариант:
-  18% → 35% → 64% → 74% → 45%
-
-  Круг остается внутри hero.
-*/
 
 @keyframes lensPositionMobile {
   0% {
