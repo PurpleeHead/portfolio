@@ -1334,6 +1334,16 @@ a:focus-visible {
   opacity: 0.85;
 }
 
+.footer__link-text {
+  display: inline-block;
+
+  transition: transform 0.25s ease;
+}
+
+.footer__link:hover .footer__link-text {
+  transform: translateX(2px);
+}
+
 /* =========================
    Footer icon
 ========================= */
@@ -1562,17 +1572,372 @@ a:focus-visible {
 }
 
 /* =========================
-   Footer link text
+   Facebook
 ========================= */
 
-.footer__link-text {
-  display: inline-block;
-
-  transition: transform 0.25s ease;
+.footer__icon-svg--facebook {
+  overflow: visible;
 }
 
-.footer__link:hover .footer__link-text {
-  transform: translateX(2px);
+.facebook-circle {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform;
+}
+
+.facebook-f {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform;
+}
+
+.footer__link--facebook:hover .facebook-circle {
+  animation: facebookCircle 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.footer__link--facebook:hover .facebook-f {
+  animation: facebookF 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes facebookCircle {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  35% {
+    transform: scale(0.82) rotate(-12deg);
+  }
+
+  65% {
+    transform: scale(1.13) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes facebookF {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  30% {
+    transform: translate(-2px, -4px) scale(0.9);
+  }
+
+  55% {
+    transform: translate(1px, 1px) scale(1.12);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* =========================
+   WhatsApp
+========================= */
+
+.footer__icon-svg--whatsapp {
+  overflow: visible;
+}
+
+.whatsapp-bubble {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform;
+}
+
+.whatsapp-phone {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform;
+}
+
+.footer__link--whatsapp {
+  position: relative;
+}
+
+.footer__link--whatsapp::after,
+.footer__link--whatsapp::before {
+  content: "";
+
+  position: absolute;
+
+  left: 11px;
+  top: 11px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid currentColor;
+  border-radius: 50%;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.footer__link--whatsapp:hover::before {
+  animation: whatsappWave 1.2s ease-out;
+}
+
+.footer__link--whatsapp:hover::after {
+  animation: whatsappWave 1.2s 0.18s ease-out;
+}
+
+.footer__link--whatsapp:hover .whatsapp-bubble {
+  animation: whatsappBubble 0.7s ease;
+}
+
+.footer__link--whatsapp:hover .whatsapp-phone {
+  animation: whatsappPhone 0.7s ease;
+}
+
+@keyframes whatsappWave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.55);
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.75);
+    opacity: 0;
+  }
+}
+
+@keyframes whatsappBubble {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(0.86) rotate(-5deg);
+  }
+
+  60% {
+    transform: scale(1.1) rotate(4deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes whatsappPhone {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-12deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-7deg);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* =========================
+   Instagram
+========================= */
+
+.footer__icon-svg--instagram {
+  overflow: visible;
+}
+
+/* Instagram camera flash */
+
+.footer__link--instagram {
+  position: relative;
+}
+
+.footer__link--instagram::after {
+  content: "";
+
+  position: absolute;
+
+  left: 11px;
+  top: 11px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 18%,
+    rgba(255, 255, 255, 0.45) 38%,
+    rgba(255, 255, 255, 0) 72%
+  );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%) scale(0.35);
+
+  filter: blur(1px);
+
+  z-index: 2;
+}
+
+.instagram-frame {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform;
+}
+
+.instagram-lens {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform;
+}
+
+.instagram-dot {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  will-change: transform, opacity;
+}
+
+/* Flash */
+
+.footer__link--instagram:hover::after {
+  animation: instagramFlash 0.42s ease-out;
+}
+
+/* Camera body */
+
+.footer__link--instagram:hover .instagram-frame {
+  animation: instagramFrame 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Camera lens */
+
+.footer__link--instagram:hover .instagram-lens {
+  animation: instagramLens 0.42s ease;
+}
+
+/* Camera dot */
+
+.footer__link--instagram:hover .instagram-dot {
+  animation: instagramDot 0.75s ease;
+}
+
+@keyframes instagramFlash {
+  0% {
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  12% {
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(0.65);
+  }
+
+  25% {
+    opacity: 0.95;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  45% {
+    opacity: 0.45;
+
+    transform: translate(-50%, -50%) scale(1.35);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(1.8);
+  }
+}
+
+@keyframes instagramFrame {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  35% {
+    transform: rotate(-8deg) scale(0.9);
+  }
+
+  65% {
+    transform: rotate(7deg) scale(1.08);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes instagramLens {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(0.72);
+  }
+
+  45% {
+    transform: scale(1.18);
+  }
+
+  65% {
+    transform: scale(0.96);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes instagramDot {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  35% {
+    transform: scale(0.4);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* =========================

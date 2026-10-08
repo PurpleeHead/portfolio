@@ -72,6 +72,8 @@
         "I work with HTML5, CSS3, SCSS, JavaScript, TypeScript and React. I use BEM, SVG sprites, SVG animations, responsive design, image optimization and modern approaches to code organization.",
       "about.text2":
         "I work with Git and GitHub, can turn Figma designs into working interfaces and pay attention to performance, semantics and cross-browser compatibility.",
+      "about.text3":
+        "I also have basic English reading skills and can work with technical documentation, developer resources, and code examples in English. I am actively improving my English to communicate more confidently in an international work environment.",
 
       "skills.subtitle": "Technologies & tools",
       "skills.title": "Skills",
@@ -256,9 +258,12 @@
       const key = element.dataset.i18n;
       const translation = dictionary[key];
 
-      if (translation) {
-        element.innerHTML = translation;
+      if (translation === undefined) {
+        console.warn(`Translation not found: ${key} (${lang})`);
+        return;
       }
+
+      element.innerHTML = translation;
     });
 
     localStorage.setItem("language", lang);
@@ -390,7 +395,13 @@
   ========================= */
 
   const footerAnimatedLinks = document.querySelectorAll(
-    ".footer__link--telegram, .footer__link--email",
+    [
+      ".footer__link--telegram",
+      ".footer__link--email",
+      ".footer__link--facebook",
+      ".footer__link--whatsapp",
+      ".footer__link--instagram",
+    ].join(", "),
   );
 
   footerAnimatedLinks.forEach((link) => {
