@@ -29,7 +29,7 @@
       "projects.promptlab.feature3": "Collections & favorites",
       "projects.promptlab.feature4": "JSON / CSV data tools",
       "projects.promptlab.feature5": "Responsive app interface",
-      "projects.promptlab.feature6": "Tested core utilities"
+      "projects.promptlab.feature6": "Tested core utilities",
 
       "projects.sminex.description":
         "Responsive residential complex landing page built from a provided design. Implemented page structure, responsive layout and image optimization.",
@@ -115,7 +115,7 @@
       "projects.promptlab.feature3": "Подборки и избранное",
       "projects.promptlab.feature4": "Инструменты JSON / CSV",
       "projects.promptlab.feature5": "Адаптивный интерфейс",
-      "projects.promptlab.feature6": "Тесты ключевых функций"
+      "projects.promptlab.feature6": "Тесты ключевых функций",
 
       "projects.sminex.description":
         "Адаптивный лендинг жилого комплекса, сверстанный по готовому дизайну. Реализовал структуру страницы, адаптивную верстку и оптимизацию изображений.",
