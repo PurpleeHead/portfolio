@@ -34,7 +34,7 @@ A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. It
 
 ### 01. PromptLab — AI Prompt Workspace
 
-A bilingual React + TypeScript workspace for creating, searching, filtering, and reusing prompt templates. Includes reusable variables, collections, favorites, local JSON/CSV import/export, theme switching, and local-first storage. The core workflow does not require a paid AI API or account.
+A productivity-focused web app for building and maintaining a reusable library of AI prompts. It helps users keep instructions organized, find the right template quickly, personalize prompts with variables, preview the final text, and manage collections and favorites. Built with React, TypeScript, Vite, and SCSS, with local-first data storage, JSON/CSV import and export, and tested core utilities. The project has room to evolve with features such as richer prompt workflows, collaboration, and optional cloud sync.
 
 - [Live demo](https://purpleehead.github.io/PromptLab/)
 - [GitHub repository](https://github.com/PurpleeHead/PromptLab)
