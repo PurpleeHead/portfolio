@@ -22,6 +22,15 @@
       "projects.subtitle": "Selected work",
       "projects.title": "Projects",
 
+      "projects.promptlab.description":
+        "A bilingual prompt workspace for creating, organizing, searching, and reusing prompt templates. Built with React and TypeScript with local-first storage and no paid AI API required for the core workflow.",
+      "projects.promptlab.feature1": "English / Russian UI",
+      "projects.promptlab.feature2": "Prompt variables & preview",
+      "projects.promptlab.feature3": "Collections & favorites",
+      "projects.promptlab.feature4": "JSON / CSV import & export",
+      "projects.promptlab.feature5": "Responsive navigation",
+      "projects.promptlab.feature6": "Unit tests",
+
       "projects.sminex.description":
         "Responsive residential complex landing page built from a provided design. Implemented page structure, responsive layout and image optimization.",
       "projects.sminex.feature1": "Responsive layout",
@@ -98,6 +107,15 @@
 
       "projects.subtitle": "Мои работы",
       "projects.title": "Проекты",
+
+      "projects.promptlab.description":
+        "Двуязычное приложение для создания, организации, поиска и повторного использования промптов. Создано на React и TypeScript с локальным хранением данных; для основных функций не нужен платный AI API.",
+      "projects.promptlab.feature1": "Интерфейс EN / RU",
+      "projects.promptlab.feature2": "Переменные и предпросмотр",
+      "projects.promptlab.feature3": "Подборки и избранное",
+      "projects.promptlab.feature4": "Импорт и экспорт JSON / CSV",
+      "projects.promptlab.feature5": "Адаптивная навигация",
+      "projects.promptlab.feature6": "Модульные тесты",
 
       "projects.sminex.description":
         "Адаптивный лендинг жилого комплекса, сверстанный по готовому дизайну. Реализовал структуру страницы, адаптивную верстку и оптимизацию изображений.",
