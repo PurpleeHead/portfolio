@@ -23,13 +23,13 @@
       "projects.title": "Projects",
 
       "projects.promptlab.description":
-        "A bilingual prompt workspace for creating, organizing, searching, and reusing prompt templates. Built with React and TypeScript with local-first storage and no paid AI API required for the core workflow.",
-      "projects.promptlab.feature1": "English / Russian UI",
-      "projects.promptlab.feature2": "Prompt variables & preview",
+        "A practical workspace for building a reusable prompt library, testing template variables, and keeping useful AI instructions organized. Built with React and TypeScript, it combines local-first storage, collections, search, favorites, and data export into a foundation that can grow into a more powerful productivity tool.",
+      "projects.promptlab.feature1": "Reusable prompt library",
+      "projects.promptlab.feature2": "Variables & live preview",
       "projects.promptlab.feature3": "Collections & favorites",
-      "projects.promptlab.feature4": "JSON / CSV import & export",
-      "projects.promptlab.feature5": "Responsive navigation",
-      "projects.promptlab.feature6": "Unit tests",
+      "projects.promptlab.feature4": "JSON / CSV data tools",
+      "projects.promptlab.feature5": "Responsive app interface",
+      "projects.promptlab.feature6": "Tested core utilities"
 
       "projects.sminex.description":
         "Responsive residential complex landing page built from a provided design. Implemented page structure, responsive layout and image optimization.",
@@ -109,13 +109,13 @@
       "projects.title": "Проекты",
 
       "projects.promptlab.description":
-        "Двуязычное приложение для создания, организации, поиска и повторного использования промптов. Создано на React и TypeScript с локальным хранением данных; для основных функций не нужен платный AI API.",
-      "projects.promptlab.feature1": "Интерфейс EN / RU",
+        "Практичное пространство для создания собственной библиотеки промптов, проверки переменных шаблонов и систематизации полезных AI-инструкций. Построено на React и TypeScript: локальное хранение, подборки, поиск, избранное и экспорт данных создают основу для дальнейшего развития в полноценный инструмент продуктивности.",
+      "projects.promptlab.feature1": "Библиотека промптов",
       "projects.promptlab.feature2": "Переменные и предпросмотр",
       "projects.promptlab.feature3": "Подборки и избранное",
-      "projects.promptlab.feature4": "Импорт и экспорт JSON / CSV",
-      "projects.promptlab.feature5": "Адаптивная навигация",
-      "projects.promptlab.feature6": "Модульные тесты",
+      "projects.promptlab.feature4": "Инструменты JSON / CSV",
+      "projects.promptlab.feature5": "Адаптивный интерфейс",
+      "projects.promptlab.feature6": "Тесты ключевых функций"
 
       "projects.sminex.description":
         "Адаптивный лендинг жилого комплекса, сверстанный по готовому дизайну. Реализовал структуру страницы, адаптивную верстку и оптимизацию изображений.",
