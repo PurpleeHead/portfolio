@@ -1,7 +1,6 @@
 # Artem Kutelev — Portfolio
 
-Personal portfolio website showcasing my frontend development projects,
-skills and experience.
+Personal portfolio website showcasing my frontend development projects, skills and experience.
 
 ## Live Demo
 
@@ -9,8 +8,7 @@ https://purpleehead.github.io/portfolio/
 
 ## About
 
-The portfolio was built from scratch with a focus on clean structure,
-responsive design and modern frontend practices.
+The portfolio was built from scratch with a focus on clean structure, responsive design and modern frontend practices.
 
 It includes:
 
@@ -37,6 +35,13 @@ It includes:
 - GitHub Pages
 
 ## Projects
+
+### PromptLab — AI Prompt Workspace
+
+A responsive React + TypeScript app for creating, organizing, searching, and reusing prompt templates with variables, collections, favorites, and local JSON/CSV import/export. Built with a local-first approach; no AI API key is required for the core workflow.
+
+[Live Demo](https://purpleehead.github.io/PromptLab/) ·
+[GitHub](https://github.com/PurpleeHead/PromptLab)
 
 ### Sminex
 
