@@ -1,74 +1,89 @@
-# Artem Kutelev — Portfolio
+# Artem Kutelev — Frontend Portfolio
 
-Personal portfolio website showcasing my frontend development projects, skills and experience.
+Personal portfolio website showcasing frontend projects, practical skills, and selected work.
 
-## Live Demo
+## Live demo
 
 https://purpleehead.github.io/portfolio/
 
 ## About
 
-The portfolio was built from scratch with a focus on clean structure, responsive design and modern frontend practices.
+A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. It features a bilingual English/Russian interface, light and dark themes, animated interactions, and a curated project list.
 
-It includes:
+## Features
 
-- Responsive layout
-- Project showcase
-- Animated UI elements
-- Responsive navigation
-- Intersection Observer animations
-- Optimized images
-- Semantic HTML
-- Accessibility basics
+- Responsive project showcase and navigation
+- English/Russian language switch
+- Light and dark themes with saved preference
+- Intersection Observer reveal animations
+- Animated hero lens and social links
+- Semantic HTML and accessibility-focused details
+- Optimized project previews and responsive layouts
 
-## Tech Stack
+## Tech stack
 
 - HTML5
 - CSS3
-- JavaScript
-- Flexbox
-- CSS Grid
-- Responsive Design
-- BEM
+- JavaScript (ES6+)
+- Flexbox and CSS Grid
+- Responsive design and BEM
 - SVG
-- Git
-- GitHub Pages
+- Git and GitHub Pages
 
-## Projects
+## Featured projects
 
-### PromptLab — AI Prompt Workspace
+### 01. PromptLab — AI Prompt Workspace
 
-A responsive React + TypeScript app for creating, organizing, searching, and reusing prompt templates with variables, collections, favorites, and local JSON/CSV import/export. Built with a local-first approach; no AI API key is required for the core workflow.
+A bilingual React + TypeScript workspace for creating, searching, filtering, and reusing prompt templates. Includes reusable variables, collections, favorites, local JSON/CSV import/export, theme switching, and local-first storage. The core workflow does not require a paid AI API or account.
 
-[Live Demo](https://purpleehead.github.io/PromptLab/) ·
-[GitHub](https://github.com/PurpleeHead/PromptLab)
+- [Live demo](https://purpleehead.github.io/PromptLab/)
+- [GitHub repository](https://github.com/PurpleeHead/PromptLab)
 
-### Sminex
+### 02. Sminex
 
-Responsive residential complex landing page.
+Responsive residential complex landing page built from a provided design, with SCSS, BEM, SVG, and optimized imagery.
 
-[Live Demo](https://purpleehead.github.io/sminex/) ·
-[GitHub](https://github.com/PurpleeHead/sminex)
+- [Live demo](https://purpleehead.github.io/sminex/)
+- [GitHub repository](https://github.com/PurpleeHead/sminex)
 
-### Personal Notes App
+### 03. Personal Notes App
 
-Full-stack notes application built with React and TypeScript.
+Full-stack notes application built with React, TypeScript, Express, JWT, LowDB, and Zod.
 
-[GitHub](https://github.com/PurpleeHead/personal-notes-app)
+- [GitHub repository](https://github.com/PurpleeHead/personal-notes-app)
 
-### Whitemark
+### 04. Whitemark
 
-Responsive contacts page with an animated preloader.
+Responsive contacts page featuring an animated preloader and SVG/CSS animations.
 
-[Live Demo](https://purpleehead.github.io/whitemark-preview/) ·
-[GitHub](https://github.com/PurpleeHead/whitemark-preview)
+- [Live demo](https://purpleehead.github.io/whitemark-preview/)
+- [GitHub repository](https://github.com/PurpleeHead/whitemark-preview)
+
+### 05. W-Wave
+
+Responsive one-page website built from a provided design.
+
+- [Live demo](https://purpleehead.github.io/w-wave/)
+- [GitHub repository](https://github.com/PurpleeHead/w-wave)
+
+### 06. Evcalid
+
+Responsive one-page website created to practice frontend layout and responsive implementation.
+
+- [Live demo](https://purpleehead.github.io/Evcalid/)
+- [GitHub repository](https://github.com/PurpleeHead/Evcalid)
+
+### 07. Lagoona
+
+Static one-page hotel website created for HTML/CSS layout practice.
+
+- [Live demo](https://purpleehead.github.io/Lagoona/)
+- [GitHub repository](https://github.com/PurpleeHead/Lagoona)
 
 ## Author
 
-**Artem Kutelev**
+**Artem Kutelev** — Frontend Developer
 
-Frontend Developer
-
-[Portfolio](https://purpleehead.github.io/portfolio/) ·
-[GitHub](https://github.com/PurpleeHead) ·
-[Telegram](https://t.me/art_alberto)
+- [Portfolio](https://purpleehead.github.io/portfolio/)
+- [GitHub](https://github.com/PurpleeHead)
+- [Telegram](https://t.me/art_alberto)
