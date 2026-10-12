@@ -190,22 +190,8 @@
       return;
     }
 
-    const current = languageToggle.querySelector(".language-toggle__current");
-
-    const alternative = languageToggle.querySelector(
-      ".language-toggle__alternative",
-    );
-
-    if (current && alternative) {
-      if (lang === "en") {
-        current.textContent = "EN";
-        alternative.textContent = "RU";
-      } else {
-        current.textContent = "RU";
-        alternative.textContent = "EN";
-      }
-    }
-
+    // Keep EN and RU in fixed positions. CSS highlights the active
+    // language using the document's data-lang attribute.
     languageToggle.setAttribute("aria-pressed", String(lang === "ru"));
 
     languageToggle.setAttribute(
