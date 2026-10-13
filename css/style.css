@@ -970,7 +970,7 @@ a:focus-visible {
 
 .project__image--promptlab {
   background:
-    radial-gradient(circle at 80% 15%, rgba(151, 119, 255, 0.15), transparent 42%),
+    radial-gradient(circle at 80% 15%, rgba(198, 83, 53, 0.15), transparent 42%),
     var(--notes-bg);
 }
 
@@ -980,8 +980,8 @@ a:focus-visible {
   height: 100%;
   min-width: 0;
   overflow: hidden;
-  color: #e8e7f4;
-  background: #10101a;
+  color: #2b302a;
+  background: #f6f2e9;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
 }
@@ -992,8 +992,8 @@ a:focus-visible {
   flex-direction: column;
   min-width: 0;
   padding: 4.5% 3.2%;
-  background: #151521;
-  border-right: 1px solid #2b2a3b;
+  background: #fbf8f1;
+  border-right: 1px solid #ded4c4;
   font-size: clamp(4px, 0.75vw, 10px);
 }
 
@@ -1002,14 +1002,14 @@ a:focus-visible {
   align-items: center;
   gap: 4px;
   margin-bottom: 18%;
-  color: #f4f2ff;
+  color: #242c27;
   font-size: clamp(6px, 1.1vw, 15px);
   font-weight: 700;
   letter-spacing: -0.04em;
 }
 
 .promptlab-preview__brand > span:last-child {
-  color: #a995ff;
+  color: #c65335;
 }
 
 .promptlab-preview__brand-icon {
@@ -1018,13 +1018,13 @@ a:focus-visible {
   width: 1.7em;
   height: 1.7em;
   border-radius: 5px;
-  background: #9b83ff;
-  color: #171322;
+  background: #c65335;
+  color: #fffdf8;
 }
 
 .promptlab-preview__workspace {
   margin-bottom: 10%;
-  color: #77768d;
+  color: #8e958c;
   font-size: clamp(3px, 0.48vw, 7px);
   letter-spacing: 0.08em;
 }
@@ -1036,20 +1036,20 @@ a:focus-visible {
   margin: 2% 0;
   padding: 7% 6%;
   border-radius: 5px;
-  color: #a6a4bb;
+  color: #68716a;
   white-space: nowrap;
 }
 
 .promptlab-preview__nav--active {
-  background: #29263e;
-  color: #c9bbff;
+  background: #f3e4dc;
+  color: #a93d25;
 }
 
 .promptlab-preview__sidebar-bottom {
   display: flex;
   gap: 7%;
   margin-top: auto;
-  color: #a6a4bb;
+  color: #68716a;
 }
 
 .promptlab-preview__main {
@@ -1059,8 +1059,8 @@ a:focus-visible {
   min-width: 0;
   padding: 3.5% 4%;
   background:
-    radial-gradient(ellipse at 70% 0%, rgba(117, 91, 190, 0.1), transparent 42%),
-    #10101a;
+    radial-gradient(ellipse at 70% 0%, rgba(198, 83, 53, 0.08), transparent 42%),
+    #f6f2e9;
 }
 
 .promptlab-preview__top {
@@ -1068,7 +1068,7 @@ a:focus-visible {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 7%;
-  color: #77768d;
+  color: #8e958c;
   font-size: clamp(4px, 0.6vw, 8px);
 }
 
@@ -1077,21 +1077,24 @@ a:focus-visible {
   place-items: center;
   width: 2.4em;
   height: 2.4em;
-  border: 1px solid #38334e;
+  border: 1px solid #ded4c4;
   border-radius: 50%;
-  background: #29243c;
-  color: #c9bbff;
+  background: #eee7da;
+  color: #a93d25;
 }
 
 .promptlab-preview__eyebrow {
   margin-bottom: 1.8%;
-  color: #9b83ff;
+  color: #c65335;
   font-size: clamp(4px, 0.55vw, 7px);
   letter-spacing: 0.13em;
 }
 
 .promptlab-preview__headline {
-  color: #f5f3ff;
+  padding: 3.5%;
+  border-radius: 6px;
+  background: #263c30;
+  color: #fffaf1;
   font-size: clamp(8px, 1.55vw, 22px);
   font-weight: 700;
   line-height: 1.16;
@@ -1099,12 +1102,12 @@ a:focus-visible {
 }
 
 .promptlab-preview__headline > span {
-  color: #a995ff;
+  color: #c65335;
 }
 
 .promptlab-preview__subtitle {
   margin-top: 2%;
-  color: #9290a8;
+  color: #68716a;
   font-size: clamp(4px, 0.62vw, 9px);
 }
 
@@ -1121,13 +1124,13 @@ a:focus-visible {
   gap: 5%;
   min-width: 0;
   padding: 8% 9%;
-  border: 1px solid #2b293b;
+  border: 1px solid #ded4c4;
   border-radius: 5px;
-  background: rgba(28, 27, 42, 0.8);
+  background: rgba(255, 253, 248, 0.92);
 }
 
 .promptlab-preview__stats small {
-  color: #9290a8;
+  color: #68716a;
   font-size: clamp(3px, 0.48vw, 7px);
   white-space: nowrap;
 }
@@ -1142,13 +1145,13 @@ a:focus-visible {
   justify-content: space-between;
   gap: 5px;
   margin-bottom: 2.5%;
-  color: #e6e3f4;
+  color: #242c27;
   font-size: clamp(4px, 0.68vw, 9px);
   font-weight: 600;
 }
 
 .promptlab-preview__section-title span {
-  color: #a995ff;
+  color: #c65335;
   font-size: 0.85em;
   white-space: nowrap;
 }
@@ -1160,9 +1163,9 @@ a:focus-visible {
   min-width: 0;
   margin-top: 2%;
   padding: 3%;
-  border: 1px solid #2b293b;
+  border: 1px solid #ded4c4;
   border-radius: 5px;
-  background: rgba(28, 27, 42, 0.65);
+  background: rgba(255, 253, 248, 0.88);
 }
 
 .promptlab-preview__prompt-icon {
@@ -1172,14 +1175,14 @@ a:focus-visible {
   width: 2em;
   height: 2em;
   border-radius: 4px;
-  background: #382b50;
-  color: #c5adff;
+  background: #f3e4dc;
+  color: #a93d25;
   font-size: clamp(6px, 0.9vw, 12px);
 }
 
 .promptlab-preview__prompt-icon--blue {
-  background: #23384e;
-  color: #9ccfff;
+  background: #e1ece8;
+  color: #397b83;
 }
 
 .promptlab-preview__prompt > span:nth-child(2) {
@@ -1192,19 +1195,19 @@ a:focus-visible {
 
 .promptlab-preview__prompt strong {
   overflow: hidden;
-  color: #e9e6f8;
+  color: #242c27;
   font-size: clamp(4px, 0.58vw, 8px);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .promptlab-preview__prompt small {
-  color: #89869f;
+  color: #68716a;
   font-size: clamp(3px, 0.45vw, 6px);
 }
 
 .promptlab-preview__prompt b {
-  color: #9a91b6;
+  color: #287a61;
   font-size: clamp(6px, 0.8vw, 11px);
 }
 
