@@ -31,6 +31,14 @@
       "projects.promptlab.feature5": "Responsive app interface",
       "projects.promptlab.feature6": "Tested core utilities",
 
+      "projects.lingvera.description":
+        "A Telegram-first English-learning MVP built around short A1 lessons and consistent practice. Includes interactive exercises, server-side answer checking, learning progress, and scheduled vocabulary review.",
+      "projects.lingvera.feature1": "30 lessons and 120 A1 exercises",
+      "projects.lingvera.feature2": "Three exercise types with answer validation",
+      "projects.lingvera.feature3": "Learning dashboard and progress tracking",
+      "projects.lingvera.feature4": "Vocabulary review scheduling",
+      "projects.lingvera.feature5": "Telegram Mini App authentication support",
+
       "projects.sminex.description":
         "Responsive residential complex landing page built from a provided design. Implemented page structure, responsive layout and image optimization.",
       "projects.sminex.feature1": "Responsive layout",
@@ -116,6 +124,14 @@
       "projects.promptlab.feature4": "Инструменты JSON / CSV",
       "projects.promptlab.feature5": "Адаптивный интерфейс",
       "projects.promptlab.feature6": "Тесты ключевых функций",
+
+      "projects.lingvera.description":
+        "MVP приложения для изучения английского через Telegram с короткими уроками уровня A1 и регулярной практикой. Включает интерактивные упражнения, серверную проверку ответов, отслеживание прогресса и планирование повторения слов.",
+      "projects.lingvera.feature1": "30 уроков и 120 упражнений A1",
+      "projects.lingvera.feature2": "Три типа упражнений и проверка ответов",
+      "projects.lingvera.feature3": "Панель обучения и отслеживание прогресса",
+      "projects.lingvera.feature4": "Планирование повторения слов",
+      "projects.lingvera.feature5": "Поддержка авторизации Telegram Mini App",
 
       "projects.sminex.description":
         "Адаптивный лендинг жилого комплекса, сверстанный по готовому дизайну. Реализовал структуру страницы, адаптивную верстку и оптимизацию изображений.",
