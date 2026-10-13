@@ -39,41 +39,50 @@ A productivity-focused web app for building and maintaining a reusable library o
 - [Live demo](https://purpleehead.github.io/PromptLab/)
 - [GitHub repository](https://github.com/PurpleeHead/PromptLab)
 
-### 02. Sminex
+### 02. Lingvéra — Telegram English Learning Mini App
+
+A deployed Telegram-first learning MVP with a React + TypeScript Mini App, FastAPI backend, PostgreSQL/SQLite persistence, server-side answer validation, progress tracking, and vocabulary review scheduling. The A1 starter course contains 30 lessons and 120 exercises. The Telegram bot provides the `/start` entry point.
+
+- [Open Mini App](https://lingv-ra.pages.dev/)
+- [Telegram bot](https://t.me/LingveraLearnBot)
+- [GitHub repository](https://github.com/PurpleeHead/Lingv-ra)
+- [API health](https://lingv-ra.onrender.com/health)
+
+### 03. Sminex
 
 Responsive residential complex landing page built from a provided design, with SCSS, BEM, SVG, and optimized imagery.
 
 - [Live demo](https://purpleehead.github.io/sminex/)
 - [GitHub repository](https://github.com/PurpleeHead/sminex)
 
-### 03. Personal Notes App
+### 04. Personal Notes App
 
 Full-stack notes application built with React, TypeScript, Express, JWT, LowDB, and Zod.
 
 - [GitHub repository](https://github.com/PurpleeHead/personal-notes-app)
 
-### 04. Whitemark
+### 05. Whitemark
 
 Responsive contacts page featuring an animated preloader and SVG/CSS animations.
 
 - [Live demo](https://purpleehead.github.io/whitemark-preview/)
 - [GitHub repository](https://github.com/PurpleeHead/whitemark-preview)
 
-### 05. W-Wave
+### 06. W-Wave
 
 Responsive one-page website built from a provided design.
 
 - [Live demo](https://purpleehead.github.io/w-wave/)
 - [GitHub repository](https://github.com/PurpleeHead/w-wave)
 
-### 06. Evcalid
+### 07. Evcalid
 
 Responsive one-page website created to practice frontend layout and responsive implementation.
 
 - [Live demo](https://purpleehead.github.io/Evcalid/)
 - [GitHub repository](https://github.com/PurpleeHead/Evcalid)
 
-### 07. Lagoona
+### 08. Lagoona
 
 Static one-page hotel website created for HTML/CSS layout practice.
 
