@@ -37,7 +37,9 @@
       "projects.lingvera.feature2": "Three exercise types with answer validation",
       "projects.lingvera.feature3": "Learning dashboard and progress tracking",
       "projects.lingvera.feature4": "Vocabulary review scheduling",
-      "projects.lingvera.feature5": "Telegram Mini App authentication support",
+      "projects.lingvera.feature5": "Telegram Mini App authentication",
+      "projects.lingvera.feature6": "Live bot and hosted API",
+      "projects.lingvera.telegram": "Telegram Bot",
 
       "projects.sminex.description":
         "Responsive residential complex landing page built from a provided design. Implemented page structure, responsive layout and image optimization.",
@@ -131,7 +133,9 @@
       "projects.lingvera.feature2": "Три типа упражнений и проверка ответов",
       "projects.lingvera.feature3": "Панель обучения и отслеживание прогресса",
       "projects.lingvera.feature4": "Планирование повторения слов",
-      "projects.lingvera.feature5": "Поддержка авторизации Telegram Mini App",
+      "projects.lingvera.feature5": "Авторизация Telegram Mini App",
+      "projects.lingvera.feature6": "Работающий бот и размещённый API",
+      "projects.lingvera.telegram": "Бот в Telegram",
 
       "projects.sminex.description":
         "Адаптивный лендинг жилого комплекса, сверстанный по готовому дизайну. Реализовал структуру страницы, адаптивную верстку и оптимизацию изображений.",
