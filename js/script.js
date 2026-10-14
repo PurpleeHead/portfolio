@@ -14,7 +14,7 @@
  "nav.skills": "Skills",
  "nav.contacts": "Contact",
 
- "hero.subtitle": " Frontend Developer",
+ "hero.subtitle": "Frontend Developer",
  "hero.title": "I build modern<br />and responsive web interfaces.",
  "hero.status": "Open to work",
  "hero.button": "View projects",
@@ -84,7 +84,7 @@
  "projects.lagoona.feature5": "Non-responsive",
 
  "about.subtitle": "About me",
- "about.title": " Frontend Developer",
+ "about.title": "Frontend Developer",
  "about.intro":
  " Frontend Developer focused on building responsive web interfaces and improving my skills through practical projects.",
  "about.text1":
@@ -110,7 +110,7 @@
  "nav.skills": "Навыки",
  "nav.contacts": "Контакты",
 
- "hero.subtitle": " Frontend Developer",
+ "hero.subtitle": "Frontend Developer",
  "hero.title": "Создаю современные<br />и адаптивные веб-интерфейсы.",
  "hero.status": "Открыт к работе",
  "hero.button": "Смотреть проекты",
@@ -180,7 +180,7 @@
  "projects.lagoona.feature5": "Без адаптивной верстки",
 
  "about.subtitle": "Обо мне",
- "about.title": " Frontend Developer",
+ "about.title": "Frontend Developer",
  "about.intro":
  " Frontend Developer, создаю адаптивные веб-интерфейсы и развиваю навыки на практических проектах.",
  "about.text1":
@@ -263,7 +263,7 @@
 
  ogDescription?.setAttribute(
  "content",
- " Frontend Developer portfolio — responsive web interfaces, React, TypeScript, HTML and SCSS.",
+ "Frontend Developer portfolio — responsive web interfaces, React, TypeScript, HTML and SCSS.",
  );
  }
  }
