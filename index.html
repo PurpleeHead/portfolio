@@ -1,1169 +1,1169 @@
 <!doctype html>
 <html lang="en" data-lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="theme-color" content="#f5f5f2" />
+ <meta name="theme-color" content="#f5f5f2" />
 
-    <title>Kutelev Artem — Junior Frontend Developer</title>
+ <title>Kutelev Artem — Frontend Developer</title>
 
-    <meta
-      name="description"
-      content="Portfolio of Kutelev Artem — Junior Frontend Developer. HTML, CSS, JavaScript, TypeScript and React."
-    />
+ <meta
+ name="description"
+ content="Portfolio of Kutelev Artem — Frontend Developer. HTML, CSS, JavaScript, TypeScript and React."
+ />
 
-    <meta
-      property="og:title"
-      content="Kutelev Artem — Junior Frontend Developer"
-    />
-
-    <meta
-      property="og:description"
-      content="Junior Frontend Developer portfolio — responsive web interfaces, React, TypeScript, HTML and SCSS."
-    />
-
-    <meta
-      property="og:url"
-      content="https://purpleehead.github.io/portfolio/"
-    />
-
-    <meta property="og:type" content="website" />
-
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <script>
-      const savedTheme = localStorage.getItem("theme");
-
-      const systemDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-
-      const theme = savedTheme || (systemDark ? "dark" : "light");
-
-      document.documentElement.dataset.theme = theme;
-
-      const initialLanguage = localStorage.getItem("language") || "en";
-
-      document.documentElement.lang = initialLanguage;
-      document.documentElement.dataset.lang = initialLanguage;
-    </script>
-  </head>
-
-  <body>
-    <!-- Header -->
-
-    <header class="header">
-      <div class="container">
-        <a class="logo" href="./" aria-label="Kutelev Artem — home">
-          Kutelev Artem
-        </a>
-
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#projects" data-i18n="nav.projects"> Projects </a>
-
-          <a href="#about" data-i18n="nav.about"> About </a>
-
-          <a href="#skills" data-i18n="nav.skills"> Skills </a>
-
-          <a href="#contacts" data-i18n="nav.contacts"> Contact </a>
-        </nav>
-
-        <div class="header__actions">
-          <!-- Language -->
-
-          <button
-            class="language-toggle"
-            type="button"
-            aria-label="Switch language"
-            aria-pressed="false"
-          >
-            <span class="language-toggle__current"> EN </span>
-
-            <span class="language-toggle__separator" aria-hidden="true">
-              /
-            </span>
-
-            <span class="language-toggle__alternative"> RU </span>
-          </button>
-
-          <!-- Theme -->
-
-          <button
-            class="theme-toggle"
-            type="button"
-            aria-label="Toggle theme"
-            aria-pressed="false"
-          >
-            <span class="theme-toggle__icon" aria-hidden="true"> ☾ </span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- Hero -->
-
-      <section class="hero">
-        <div class="container">
-          <div class="hero__heading">
-            <p class="hero__subtitle" data-i18n="hero.subtitle">
-              Junior Frontend Developer
-            </p>
-
-            <div class="hero__title-wrapper">
-              <h1 class="hero__title">
-                <span data-i18n="hero.title">
-                  I build modern<br />
-                  and responsive web interfaces.
-                </span>
-              </h1>
-
-              <div
-                class="hero__color-layer"
-                aria-hidden="true"
-                data-i18n="hero.title"
-              >
-                I build modern<br />
-                and responsive web interfaces.
-              </div>
-
-              <div class="hero__lens" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <p class="hero__text">HTML · CSS · JavaScript · TypeScript · React</p>
-
-          <div class="hero__block">
-            <p class="hero__status">
-              <span class="hero__status-dot" aria-hidden="true"></span>
-
-              <span data-i18n="hero.status"> Open to work </span>
-            </p>
-
-            <a class="button" href="#projects">
-              <span data-i18n="hero.button"> View projects </span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-
-      <section class="projects" id="projects">
-        <div class="container">
-          <div class="section__heading reveal">
-            <p class="section__subtitle" data-i18n="projects.subtitle">
-              Selected work
-            </p>
-
-            <h2 class="section__title" data-i18n="projects.title">Projects</h2>
-          </div>
-
-          <div class="projects__list">
-            <!-- PromptLab -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser project__image--promptlab">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                    <div class="project__browser-address">promptlab</div>
-                  </div>
-
-                  <div class="project__browser-screen">
-                    <div class="promptlab-preview" aria-hidden="true">
-                      <aside class="promptlab-preview__sidebar">
-                        <div class="promptlab-preview__brand"><span class="promptlab-preview__brand-icon">✳</span> prompt<span>lab</span></div>
-                        <div class="promptlab-preview__workspace">PERSONAL WORKSPACE</div>
-                        <div class="promptlab-preview__nav promptlab-preview__nav--active">▦ <span>Overview</span></div>
-                        <div class="promptlab-preview__nav">▤ <span>Prompt library</span></div>
-                        <div class="promptlab-preview__nav">▧ <span>Collections</span></div>
-                        <div class="promptlab-preview__nav">♡ <span>Favorites</span></div>
-                        <div class="promptlab-preview__sidebar-bottom">⚙ <span>Settings</span></div>
-                      </aside>
-
-                      <div class="promptlab-preview__main">
-                        <div class="promptlab-preview__top"><span>Workspace&nbsp; / &nbsp;Overview</span><span class="promptlab-preview__avatar">PL</span></div>
-                        <div class="promptlab-preview__eyebrow">YOUR WORKSPACE</div>
-                        <div class="promptlab-preview__headline">A calmer space for<br />better prompts<span>.</span></div>
-                        <div class="promptlab-preview__subtitle">Your prompts, thoughtfully organized.</div>
-                        <div class="promptlab-preview__stats">
-                          <div><small>Total prompts</small><strong>24</strong></div>
-                          <div><small>Favorites</small><strong>08</strong></div>
-                          <div><small>Collections</small><strong>04</strong></div>
-                        </div>
-                        <div class="promptlab-preview__section-title">Recently updated <span>View library&nbsp; ↗</span></div>
-                        <div class="promptlab-preview__prompt"><span class="promptlab-preview__prompt-icon">✧</span><span><strong>Product description</strong><small>Writing · Marketing</small></span><b>♡</b></div>
-                        <div class="promptlab-preview__prompt"><span class="promptlab-preview__prompt-icon promptlab-preview__prompt-icon--blue">⌘</span><span><strong>Code review assistant</strong><small>Development · Code</small></span><b>♡</b></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">01 / WEB APPLICATION</p>
-                  <h3 class="project__title">PromptLab</h3>
-                </div>
-
-                <p class="project__description" data-i18n="projects.promptlab.description">
-                  A practical workspace for building a reusable prompt library, testing template variables, and keeping useful AI instructions organized. Built with React and TypeScript, it combines local-first storage, collections, search, favorites, and data export into a foundation that can grow into a more powerful productivity tool.
-                </p>
-
-                <p class="project__stack">
-                  React · TypeScript · Vite · SCSS · React Router · Vitest
-                </p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.promptlab.feature1">English / Russian UI</li>
-                  <li data-i18n="projects.promptlab.feature2">Prompt variables & preview</li>
-                  <li data-i18n="projects.promptlab.feature3">Collections & favorites</li>
-                  <li data-i18n="projects.promptlab.feature4">JSON / CSV import & export</li>
-                  <li data-i18n="projects.promptlab.feature5">Responsive navigation</li>
-                  <li data-i18n="projects.promptlab.feature6">Unit tests</li>
-                </ul>
-
-                <div class="project__links">
-                  <a href="https://purpleehead.github.io/PromptLab/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                  <a href="https://github.com/PurpleeHead/PromptLab" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Lingvéra -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser project__image--lingvera">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots"><span></span><span></span><span></span></div>
-                    <div class="project__browser-address">lingv-ra.pages.dev</div>
-                  </div>
-                  <div class="project__browser-screen lingvera-preview">
-                    <div class="lingvera-preview__topbar">
-                      <span class="lingvera-preview__brand"><i>L</i> Lingvéra</span>
-                      <span class="lingvera-preview__streak">✦ 3 <small>day streak</small></span>
-                      <span class="lingvera-preview__lang">RU&nbsp; <b>EN</b></span>
-                    </div>
-                    <div class="lingvera-preview__hero">
-                      <div class="lingvera-preview__copy">
-                        <span class="lingvera-preview__eyebrow"><i></i> YOUR LEARNING PATH</span>
-                        <strong>English that<br />becomes a habit.</strong>
-                        <p>Short lessons. Daily practice. Progress without overwhelm.</p>
-                        <span class="lingvera-preview__button">Continue learning&nbsp; ↗</span>
-                        <small>◷ 5–10 min&nbsp; · &nbsp;A1 beginner</small>
-                      </div>
-                      <div class="lingvera-preview__art">
-                        <div class="lingvera-preview__orbit"></div>
-                        <div class="lingvera-preview__word"><small>WORD OF THE DAY</small><strong>hello<span>!</span></strong><em>/həˈləʊ/</em><span>привет · greeting</span></div>
-                        <div class="lingvera-preview__float">✦ <b>+1</b><small>new skill</small></div>
-                      </div>
-                    </div>
-                    <div class="lingvera-preview__section">
-                      <div class="lingvera-preview__section-title"><div><small>YOUR LEARNING PATH</small><strong>Your lessons</strong></div><span>Review words ↗</span></div>
-                      <div class="lingvera-preview__progress"><b>0 / 30</b><span> lessons completed</span><i><span></span></i></div>
-                      <div class="lingvera-preview__lessons">
-                        <div class="lingvera-preview__lesson"><span class="lingvera-preview__lesson-icon">✳</span><small>A1 · 5 min</small><b>First words</b><span>4 quick exercises</span></div>
-                        <div class="lingvera-preview__lesson"><span class="lingvera-preview__lesson-icon">◈</span><small>A1 · 5 min</small><b>Introducing yourself</b><span>4 quick exercises</span></div>
-                        <div class="lingvera-preview__lesson"><span class="lingvera-preview__lesson-icon">✦</span><small>A1 · 5 min</small><b>Everyday English</b><span>4 quick exercises</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">02 / LEARNING WEB APP</p>
-                  <h3 class="project__title">Lingvéra</h3>
-                </div>
-
-                <p class="project__description" data-i18n="projects.lingvera.description">
-                  A deployed Telegram-first English-learning MVP built around short A1 lessons and consistent practice. The React + TypeScript Mini App connects to a FastAPI backend with persistent learning data, server-side answer checking, progress tracking, and scheduled vocabulary review. The Telegram bot provides the `/start` entry point.
-                </p>
-
-                <p class="project__stack">
-                  React · TypeScript · Vite · FastAPI · Python · SQLAlchemy · PostgreSQL · SQLite
-                </p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.lingvera.feature1">30 lessons and 120 A1 exercises</li>
-                  <li data-i18n="projects.lingvera.feature2">Three exercise types with answer validation</li>
-                  <li data-i18n="projects.lingvera.feature3">Learning dashboard and progress tracking</li>
-                  <li data-i18n="projects.lingvera.feature4">Vocabulary review scheduling</li>
-                  <li data-i18n="projects.lingvera.feature5">Telegram Mini App authentication</li>
-                  <li data-i18n="projects.lingvera.feature6">Live bot and hosted API</li>
-                </ul>
-
-                <div class="project__links">
-                  <a href="https://lingv-ra.pages.dev/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                  <a href="https://github.com/PurpleeHead/Lingv-ra" target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a class="project__link--telegram" href="https://t.me/LingveraLearnBot" target="_blank" rel="noopener noreferrer" aria-label="Open Lingvéra Telegram bot" data-i18n="projects.lingvera.telegram">Telegram Bot</a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Sminex -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                    <div class="project__browser-address">sminex</div>
-                  </div>
-
-                  <div class="project__browser-screen">
-                    <img
-                      src="./images/sminex.png"
-                      alt="Sminex — responsive residential complex landing page"
-                      fetchpriority="high"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">03 / LANDING PAGE</p>
-
-                  <h3 class="project__title">Sminex</h3>
-                </div>
-
-                <p
-                  class="project__description"
-                  data-i18n="projects.sminex.description"
-                >
-                  Responsive residential complex landing page built from a
-                  provided design. Implemented page structure, responsive layout
-                  and image optimization.
-                </p>
-
-                <p class="project__stack">
-                  HTML5 · SCSS · BEM · SVG · WebP · Git
-                </p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.sminex.feature1">
-                    Responsive layout
-                  </li>
-
-                  <li>BEM</li>
-
-                  <li data-i18n="projects.sminex.feature3">SVG sprite</li>
-
-                  <li data-i18n="projects.sminex.feature4">
-                    Image optimization
-                  </li>
-                </ul>
-
-                <div class="project__links">
-                  <a
-                    href="https://purpleehead.github.io/sminex/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/PurpleeHead/sminex"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Personal Notes App -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--notes">
-                <div class="project__screens">
-                  <img
-                    src="./images/notes-auth.png"
-                    alt="Personal Notes App — authentication"
-                    loading="lazy"
-                    decoding="async"
-                  />
-
-                  <img
-                    src="./images/notes-list.png"
-                    alt="Personal Notes App — notes list"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">04 / FULL-STACK WEB APP</p>
-
-                  <h3 class="project__title">Personal Notes App</h3>
-                </div>
-
-                <p
-                  class="project__description"
-                  data-i18n="projects.notes.description"
-                >
-                  Full-stack application for user registration, authentication
-                  and personal notes with server-side data storage.
-                </p>
-
-                <p class="project__stack">
-                  React · TypeScript · Express · JWT · LowDB · Zod
-                </p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.notes.feature1">
-                    User registration and authentication
-                  </li>
-
-                  <li data-i18n="projects.notes.feature2">JWT + Cookies</li>
-
-                  <li data-i18n="projects.notes.feature3">REST API</li>
-
-                  <li data-i18n="projects.notes.feature4">Persistent notes</li>
-                </ul>
-
-                <div class="project__links">
-                  <a
-                    href="https://github.com/PurpleeHead/personal-notes-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Whitemark -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                    <div class="project__browser-address">whitemark</div>
-                  </div>
-
-                  <div class="project__browser-screen">
-                    <video
-                      src="./images/whitemark-preview.mp4"
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                      preload="metadata"
-                      aria-label="Whitemark — animated preloader"
-                    ></video>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">05 / LANDING PAGE</p>
-
-                  <h3 class="project__title">Whitemark</h3>
-                </div>
-
-                <p
-                  class="project__description"
-                  data-i18n="projects.whitemark.description"
-                >
-                  Responsive contact page with an animated preloader. Company
-                  logos appear sequentially on the initial load, followed by a
-                  smooth transition to the main interface.
-                </p>
-
-                <p class="project__stack">HTML5 · SCSS · BEM · SVG · Git</p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.whitemark.feature1">
-                    Animated preloader
-                  </li>
-
-                  <li data-i18n="projects.whitemark.feature2">SVG sprite</li>
-
-                  <li data-i18n="projects.whitemark.feature3">
-                    CSS animations
-                  </li>
-
-                  <li data-i18n="projects.whitemark.feature4">
-                    Responsive layout
-                  </li>
-
-                  <li data-i18n="projects.whitemark.feature5">GitHub Pages</li>
-                </ul>
-
-                <div class="project__links">
-                  <a
-                    href="https://purpleehead.github.io/whitemark-preview/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/PurpleeHead/whitemark-preview"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- W-Wave -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                    <div class="project__browser-address">w-wave</div>
-                  </div>
-
-                  <div class="project__browser-screen">
-                    <img
-                      src="./images/w-wave.png"
-                      alt="W-Wave — responsive one-page website"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">06 / LANDING PAGE</p>
-
-                  <h3 class="project__title">W-Wave</h3>
-                </div>
-
-                <p
-                  class="project__description"
-                  data-i18n="projects.wwave.description"
-                >
-                  Responsive one-page website built from a provided design.
-                  Implemented the page structure, responsive layout and
-                  interactive interface elements.
-                </p>
-
-                <p class="project__stack">HTML5 · CSS3 · BEM · Git</p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.wwave.feature1">Responsive layout</li>
-
-                  <li data-i18n="projects.wwave.feature2">BEM</li>
-
-                  <li data-i18n="projects.wwave.feature3">SCSS</li>
-                </ul>
-
-                <div class="project__links">
-                  <a
-                    href="https://purpleehead.github.io/w-wave/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/PurpleeHead/w-wave"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Evcalid -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                    <div class="project__browser-address">evcalid</div>
-                  </div>
-
-                  <div class="project__browser-screen">
-                    <img
-                      src="./images/evcalid.png"
-                      alt="Evcalid — responsive one-page website"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">07 / LANDING PAGE</p>
-
-                  <h3 class="project__title">Evcalid</h3>
-                </div>
-
-                <p
-                  class="project__description"
-                  data-i18n="projects.evcalid.description"
-                >
-                  Responsive one-page website built as part of frontend layout
-                  practice. The project focuses on page structure,
-                  responsiveness and clean interface implementation.
-                </p>
-
-                <p class="project__stack">HTML5 · CSS3 · BEM · Git</p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.evcalid.feature1">
-                    Responsive layout
-                  </li>
-
-                  <li data-i18n="projects.evcalid.feature2">Semantic HTML</li>
-
-                  <li data-i18n="projects.evcalid.feature3">SCSS</li>
-
-                  <li data-i18n="projects.evcalid.feature4">BEM</li>
-                </ul>
-
-                <div class="project__links">
-                  <a
-                    href="https://purpleehead.github.io/Evcalid/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/PurpleeHead/Evcalid"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Lagoona -->
-
-            <article class="project reveal">
-              <div class="project__image project__image--browser">
-                <div class="project__browser">
-                  <div class="project__browser-bar" aria-hidden="true">
-                    <div class="project__browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                    <div class="project__browser-address">lagoona</div>
-                  </div>
-
-                  <div class="project__browser-screen">
-                    <img
-                      src="./images/lagoona.png"
-                      alt="Lagoona — hotel one-page website"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__content">
-                <div class="project__heading">
-                  <p class="project__number">08 / ONE-PAGE WEBSITE</p>
-
-                  <h3 class="project__title">Lagoona</h3>
-                </div>
-
-                <p
-                  class="project__description"
-                  data-i18n="projects.lagoona.description"
-                >
-                  Static one-page hotel website created for HTML/CSS layout
-                  practice. The project focuses on page structure, cards,
-                  positioning and classic layout techniques.
-                </p>
-
-                <p class="project__stack">HTML5 · CSS3 · Flexbox · BEM · Git</p>
-
-                <ul class="project__features">
-                  <li data-i18n="projects.lagoona.feature1">Semantic HTML</li>
-
-                  <li data-i18n="projects.lagoona.feature2">Flexbox</li>
-
-                  <li data-i18n="projects.lagoona.feature3">BEM</li>
-
-                  <li data-i18n="projects.lagoona.feature4">Classic layout</li>
-
-                  <li data-i18n="projects.lagoona.feature5">Non-responsive</li>
-                </ul>
-
-                <div class="project__links">
-                  <a
-                    href="https://purpleehead.github.io/Lagoona/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/PurpleeHead/Lagoona"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- About -->
-
-      <section class="about" id="about">
-        <div class="container">
-          <div class="section__heading reveal">
-            <p class="section__subtitle" data-i18n="about.subtitle">About me</p>
-
-            <h2 class="section__title" data-i18n="about.title">
-              Junior Frontend Developer
-            </h2>
-          </div>
-
-          <div class="about__content reveal">
-            <p class="about__text" data-i18n="about.intro">
-              Junior Frontend Developer focused on building responsive web
-              interfaces and improving my skills through practical projects.
-            </p>
-
-            <p class="about__text about__text--small" data-i18n="about.text1">
-              I work with HTML5, CSS3, SCSS, JavaScript, TypeScript and React. I
-              use BEM, SVG sprites, SVG animations, responsive design, image
-              optimization and modern approaches to code organization.
-            </p>
-
-            <p class="about__text about__text--small" data-i18n="about.text2">
-              I work with Git and GitHub, can turn Figma designs into working
-              interfaces and pay attention to performance, semantics and
-              cross-browser compatibility.
-            </p>
-
-            <p class="about__text about__text--small" data-i18n="about.text3">
-              I also have basic English reading skills and can work with
-              technical documentation, developer resources, and code examples in
-              English. I am actively improving my English to communicate more
-              confidently in an international work environment.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-
-      <section class="skills" id="skills">
-        <div class="container">
-          <div class="section__heading reveal">
-            <p class="section__subtitle" data-i18n="skills.subtitle">
-              Technologies & tools
-            </p>
-
-            <h2 class="section__title" data-i18n="skills.title">Skills</h2>
-          </div>
-
-          <div class="skills__grid">
-            <div class="skills__group reveal">
-              <h3 class="skills__group-title">HTML & CSS</h3>
-
-              <ul class="skills__list">
-                <li>HTML5</li>
-                <li>Semantic HTML</li>
-                <li>CSS3</li>
-                <li>SCSS</li>
-                <li>BEM</li>
-                <li>Flexbox</li>
-                <li>CSS Grid</li>
-                <li>Responsive Design</li>
-                <li>Mobile First</li>
-              </ul>
-            </div>
-
-            <div class="skills__group reveal">
-              <h3 class="skills__group-title">JavaScript</h3>
-
-              <ul class="skills__list">
-                <li>JavaScript ES6+</li>
-                <li>DOM</li>
-                <li>Events</li>
-                <li>Async / Await</li>
-                <li>Fetch API</li>
-                <li>JSON</li>
-                <li>ES Modules</li>
-              </ul>
-            </div>
-
-            <div class="skills__group reveal">
-              <h3 class="skills__group-title">React & TypeScript</h3>
-
-              <ul class="skills__list">
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>React Hooks</li>
-                <li>React Router</li>
-                <li>React Hook Form</li>
-                <li>Zod</li>
-                <li>React Query</li>
-              </ul>
-            </div>
-
-            <div class="skills__group reveal">
-              <h3 class="skills__group-title">SVG & Optimization</h3>
-
-              <ul class="skills__list">
-                <li>SVG</li>
-                <li>SVG Sprite</li>
-                <li>SVG Animation</li>
-                <li>WebP</li>
-                <li>AVIF</li>
-                <li>Lazy Loading</li>
-                <li>Image Optimization</li>
-                <li>Lighthouse</li>
-              </ul>
-            </div>
-
-            <div class="skills__group reveal">
-              <h3 class="skills__group-title">Tools</h3>
-
-              <ul class="skills__list">
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Figma</li>
-                <li>VS Code</li>
-                <li>npm</li>
-                <li>Chrome DevTools</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-
-    <footer class="footer" id="contacts">
-      <div class="container">
-        <div class="section__heading reveal">
-          <p class="section__subtitle" data-i18n="footer.subtitle">Contact</p>
-
-          <h2 class="footer__title" data-i18n="footer.title">
-            Let's work together.
-          </h2>
-        </div>
-
-        <p class="footer__text reveal">
-          <span data-i18n="footer.text">
-            Open to job opportunities, freelance projects and interesting
-            frontend work.
-          </span>
-        </p>
-
-        <div class="footer__links reveal">
-          <!-- GitHub -->
-
-          <a
-            class="footer__link footer__link--github"
-            href="https://github.com/PurpleeHead"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <span class="footer__icon" aria-hidden="true">
-              <svg
-                class="footer__icon-svg footer__icon-svg--github"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48
-                  0-.24-.01-1.04-.01-1.89-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46
-                  -.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83
-                  .09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68
-                  -.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.84c.85 0
-                  1.7.12 2.49.35 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03
-                  1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01
-                  2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12C22 6.48 17.52 2 12 2Z"
-                />
-              </svg>
-            </span>
-
-            <span class="footer__link-text"> GitHub </span>
-          </a>
-
-          <!-- Telegram -->
-
-          <a
-            class="footer__link footer__link--telegram"
-            href="https://t.me/art_alberto"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Telegram"
-          >
-            <span class="footer__icon" aria-hidden="true">
-              <svg
-                class="footer__icon-svg footer__icon-svg--telegram"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  class="telegram-plane"
-                  d="M21.5 3.5 3.8 10.35c-.9.35-.89.84-.16 1.06l4.54 1.42
-                  1.74 5.43c.21.6.11.84.72.84.48 0 .69-.22.96-.48l2.34-2.27
-                  4.86 3.59c.89.49 1.53.23 1.75-.83L23.1 5.03c.32-1.31-.5-1.9-1.6-1.53Z"
-                  fill="currentColor"
-                />
-
-                <path
-                  class="telegram-line"
-                  d="m8.18 12.83 9.66-6.09-7.52 7.03"
-                  stroke="var(--footer-bg)"
-                  stroke-width="0.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-
-            <span class="footer__link-text"> Telegram </span>
-          </a>
-
-          <!-- Email -->
-
-          <a
-            class="footer__link footer__link--email"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=purpleehead@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Email"
-          >
-            <span class="footer__icon" aria-hidden="true">
-              <svg
-                class="footer__icon-svg footer__icon-svg--email"
-                viewBox="0 0 32 24"
-                fill="none"
-              >
-                <rect
-                  class="email-envelope"
-                  x="1.5"
-                  y="2"
-                  width="29"
-                  height="20"
-                  rx="2"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                />
-
-                <rect
-                  class="email-letter"
-                  x="7"
-                  y="6"
-                  width="18"
-                  height="14"
-                  rx="1"
-                  fill="var(--footer-bg)"
-                  stroke="currentColor"
-                  stroke-width="1.4"
-                />
-
-                <path
-                  class="email-folds"
-                  d="m2.5 4 13.5 9.5L29.5 4"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-
-                <path
-                  class="email-flap"
-                  d="M2.5 4 16 14 29.5 4"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-
-            <span class="footer__link-text"> Email </span>
-          </a>
-
-          <!-- Facebook -->
-
-          <a
-            class="footer__link footer__link--facebook"
-            href="https://www.facebook.com/share/18oFMNGd2a/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <span class="footer__icon" aria-hidden="true">
-              <svg
-                class="footer__icon-svg footer__icon-svg--facebook"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <circle
-                  class="facebook-circle"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  fill="currentColor"
-                />
-
-                <path
-                  class="facebook-f"
-                  d="M13.6 19v-6h2.05l.3-2.35H13.6V9.15c0-.68.19-1.15 1.18-1.15h1.26V5.9c-.22-.03-.97-.1-1.85-.1-1.84 0-3.1 1.12-3.1 3.17v1.68H9V13h2.09v6h2.51Z"
-                  fill="var(--footer-bg)"
-                />
-              </svg>
-            </span>
-
-            <span class="footer__link-text"> Facebook </span>
-          </a>
-
-          <!-- WhatsApp -->
-
-          <a
-            class="footer__link footer__link--whatsapp"
-            href="https://wa.me/qr/HSRSUZ6X5WVGI1?s=r"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
-            <span class="footer__icon" aria-hidden="true">
-              <svg
-                class="footer__icon-svg footer__icon-svg--whatsapp"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  class="whatsapp-bubble"
-                  d="M12 2.25a9.75 9.75 0 0 0-8.36 14.76L2.5 21.5l4.66-1.1A9.75 9.75 0 1 0 12 2.25Z"
-                  fill="currentColor"
-                />
-
-                <path
-                  class="whatsapp-phone"
-                  d="M8.65 7.35c.27-.27.57-.3.8-.08l1.08 1.06c.23.23.25.53.08.82l-.55.86c-.12.19-.13.42-.02.62.32.57.76 1.12 1.3 1.64.54.53 1.1.94 1.67 1.25.2.11.43.1.61-.03l.82-.59c.28-.2.59-.19.83.03l1.1 1.03c.24.22.24.54-.02.83l-.62.69c-.4.44-1.03.62-1.62.43-1.17-.38-2.47-1.2-3.68-2.4-1.2-1.19-2.04-2.47-2.43-3.64-.2-.59-.03-1.22.4-1.63l.65-.61Z"
-                  fill="var(--footer-bg)"
-                />
-              </svg>
-            </span>
-
-            <span class="footer__link-text"> WhatsApp </span>
-          </a>
-
-          <!-- Instagram -->
-
-          <a
-            class="footer__link footer__link--instagram"
-            href="https://www.instagram.com/daehelprup?stkn=YWQ0ZXdtY3d0anE4&utm_source=qr"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <span class="footer__icon" aria-hidden="true">
-              <svg
-                class="footer__icon-svg footer__icon-svg--instagram"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <rect
-                  class="instagram-frame"
-                  x="3"
-                  y="3"
-                  width="18"
-                  height="18"
-                  rx="5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-
-                <circle
-                  class="instagram-lens"
-                  cx="12"
-                  cy="12"
-                  r="4"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-
-                <circle
-                  class="instagram-dot"
-                  cx="17.3"
-                  cy="6.7"
-                  r="1.2"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-
-            <span class="footer__link-text"> Instagram </span>
-          </a>
-        </div>
-
-        <p class="footer__copyright" data-i18n="footer.copyright">
-          © 2026 Kutelev Artem. Frontend Developer.
-        </p>
-      </div>
-    </footer>
-
-    <script defer src="./js/script.js"></script>
-  </body>
+ <meta
+ property="og:title"
+ content="Kutelev Artem — Frontend Developer"
+ />
+
+ <meta
+ property="og:description"
+ content=" Frontend Developer portfolio — responsive web interfaces, React, TypeScript, HTML and SCSS."
+ />
+
+ <meta
+ property="og:url"
+ content="https://purpleehead.github.io/portfolio/"
+ />
+
+ <meta property="og:type" content="website" />
+
+ <link rel="stylesheet" href="./css/style.css" />
+
+ <script>
+ const savedTheme = localStorage.getItem("theme");
+
+ const systemDark = window.matchMedia(
+ "(prefers-color-scheme: dark)",
+ ).matches;
+
+ const theme = savedTheme || (systemDark ? "dark" : "light");
+
+ document.documentElement.dataset.theme = theme;
+
+ const initialLanguage = localStorage.getItem("language") || "en";
+
+ document.documentElement.lang = initialLanguage;
+ document.documentElement.dataset.lang = initialLanguage;
+ </script>
+ </head>
+
+ <body>
+ <!-- Header -->
+
+ <header class="header">
+ <div class="container">
+ <a class="logo" href="./" aria-label="Kutelev Artem — home">
+ Kutelev Artem
+ </a>
+
+ <nav class="nav" aria-label="Main navigation">
+ <a href="#projects" data-i18n="nav.projects"> Projects </a>
+
+ <a href="#about" data-i18n="nav.about"> About </a>
+
+ <a href="#skills" data-i18n="nav.skills"> Skills </a>
+
+ <a href="#contacts" data-i18n="nav.contacts"> Contact </a>
+ </nav>
+
+ <div class="header__actions">
+ <!-- Language -->
+
+ <button
+ class="language-toggle"
+ type="button"
+ aria-label="Switch language"
+ aria-pressed="false"
+ >
+ <span class="language-toggle__current"> EN </span>
+
+ <span class="language-toggle__separator" aria-hidden="true">
+ /
+ </span>
+
+ <span class="language-toggle__alternative"> RU </span>
+ </button>
+
+ <!-- Theme -->
+
+ <button
+ class="theme-toggle"
+ type="button"
+ aria-label="Toggle theme"
+ aria-pressed="false"
+ >
+ <span class="theme-toggle__icon" aria-hidden="true"> ☾ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <main>
+ <!-- Hero -->
+
+ <section class="hero">
+ <div class="container">
+ <div class="hero__heading">
+ <p class="hero__subtitle" data-i18n="hero.subtitle">
+ Frontend Developer
+ </p>
+
+ <div class="hero__title-wrapper">
+ <h1 class="hero__title">
+ <span data-i18n="hero.title">
+ I build modern<br />
+ and responsive web interfaces.
+ </span>
+ </h1>
+
+ <div
+ class="hero__color-layer"
+ aria-hidden="true"
+ data-i18n="hero.title"
+ >
+ I build modern<br />
+ and responsive web interfaces.
+ </div>
+
+ <div class="hero__lens" aria-hidden="true"></div>
+ </div>
+ </div>
+
+ <p class="hero__text">HTML · CSS · JavaScript · TypeScript · React</p>
+
+ <div class="hero__block">
+ <p class="hero__status">
+ <span class="hero__status-dot" aria-hidden="true"></span>
+
+ <span data-i18n="hero.status"> Open to work </span>
+ </p>
+
+ <a class="button" href="#projects">
+ <span data-i18n="hero.button"> View projects </span>
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- Projects -->
+
+ <section class="projects" id="projects">
+ <div class="container">
+ <div class="section__heading reveal">
+ <p class="section__subtitle" data-i18n="projects.subtitle">
+ Selected work
+ </p>
+
+ <h2 class="section__title" data-i18n="projects.title">Projects</h2>
+ </div>
+
+ <div class="projects__list">
+ <!-- PromptLab -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser project__image--promptlab">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <div class="project__browser-address">promptlab</div>
+ </div>
+
+ <div class="project__browser-screen">
+ <div class="promptlab-preview" aria-hidden="true">
+ <aside class="promptlab-preview__sidebar">
+ <div class="promptlab-preview__brand"><span class="promptlab-preview__brand-icon">✳</span> prompt<span>lab</span></div>
+ <div class="promptlab-preview__workspace">PERSONAL WORKSPACE</div>
+ <div class="promptlab-preview__nav promptlab-preview__nav--active">▦ <span>Overview</span></div>
+ <div class="promptlab-preview__nav">▤ <span>Prompt library</span></div>
+ <div class="promptlab-preview__nav">▧ <span>Collections</span></div>
+ <div class="promptlab-preview__nav">♡ <span>Favorites</span></div>
+ <div class="promptlab-preview__sidebar-bottom">⚙ <span>Settings</span></div>
+ </aside>
+
+ <div class="promptlab-preview__main">
+ <div class="promptlab-preview__top"><span>Workspace&nbsp; / &nbsp;Overview</span><span class="promptlab-preview__avatar">PL</span></div>
+ <div class="promptlab-preview__eyebrow">YOUR WORKSPACE</div>
+ <div class="promptlab-preview__headline">A calmer space for<br />better prompts<span>.</span></div>
+ <div class="promptlab-preview__subtitle">Your prompts, thoughtfully organized.</div>
+ <div class="promptlab-preview__stats">
+ <div><small>Total prompts</small><strong>24</strong></div>
+ <div><small>Favorites</small><strong>08</strong></div>
+ <div><small>Collections</small><strong>04</strong></div>
+ </div>
+ <div class="promptlab-preview__section-title">Recently updated <span>View library&nbsp; ↗</span></div>
+ <div class="promptlab-preview__prompt"><span class="promptlab-preview__prompt-icon">✧</span><span><strong>Product description</strong><small>Writing · Marketing</small></span><b>♡</b></div>
+ <div class="promptlab-preview__prompt"><span class="promptlab-preview__prompt-icon promptlab-preview__prompt-icon--blue">⌘</span><span><strong>Code review assistant</strong><small>Development · Code</small></span><b>♡</b></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">01 / WEB APPLICATION</p>
+ <h3 class="project__title">PromptLab</h3>
+ </div>
+
+ <p class="project__description" data-i18n="projects.promptlab.description">
+ A practical workspace for building a reusable prompt library, testing template variables, and keeping useful AI instructions organized. Built with React and TypeScript, it combines local-first storage, collections, search, favorites, and data export into a foundation that can grow into a more powerful productivity tool.
+ </p>
+
+ <p class="project__stack">
+ React · TypeScript · Vite · SCSS · React Router · Vitest
+ </p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.promptlab.feature1">English / Russian UI</li>
+ <li data-i18n="projects.promptlab.feature2">Prompt variables & preview</li>
+ <li data-i18n="projects.promptlab.feature3">Collections & favorites</li>
+ <li data-i18n="projects.promptlab.feature4">JSON / CSV import & export</li>
+ <li data-i18n="projects.promptlab.feature5">Responsive navigation</li>
+ <li data-i18n="projects.promptlab.feature6">Unit tests</li>
+ </ul>
+
+ <div class="project__links">
+ <a href="https://purpleehead.github.io/PromptLab/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+ <a href="https://github.com/PurpleeHead/PromptLab" target="_blank" rel="noopener noreferrer">GitHub</a>
+ </div>
+ </div>
+ </article>
+
+ <!-- Lingvéra -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser project__image--lingvera">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots"><span></span><span></span><span></span></div>
+ <div class="project__browser-address">lingv-ra.pages.dev</div>
+ </div>
+ <div class="project__browser-screen lingvera-preview">
+ <div class="lingvera-preview__topbar">
+ <span class="lingvera-preview__brand"><i>L</i> Lingvéra</span>
+ <span class="lingvera-preview__streak">✦ 3 <small>day streak</small></span>
+ <span class="lingvera-preview__lang">RU&nbsp; <b>EN</b></span>
+ </div>
+ <div class="lingvera-preview__hero">
+ <div class="lingvera-preview__copy">
+ <span class="lingvera-preview__eyebrow"><i></i> YOUR LEARNING PATH</span>
+ <strong>English that<br />becomes a habit.</strong>
+ <p>Short lessons. Daily practice. Progress without overwhelm.</p>
+ <span class="lingvera-preview__button">Continue learning&nbsp; ↗</span>
+ <small>◷ 5–10 min&nbsp; · &nbsp;A1 beginner</small>
+ </div>
+ <div class="lingvera-preview__art">
+ <div class="lingvera-preview__orbit"></div>
+ <div class="lingvera-preview__word"><small>WORD OF THE DAY</small><strong>hello<span>!</span></strong><em>/həˈləʊ/</em><span>привет · greeting</span></div>
+ <div class="lingvera-preview__float">✦ <b>+1</b><small>new skill</small></div>
+ </div>
+ </div>
+ <div class="lingvera-preview__section">
+ <div class="lingvera-preview__section-title"><div><small>YOUR LEARNING PATH</small><strong>Your lessons</strong></div><span>Review words ↗</span></div>
+ <div class="lingvera-preview__progress"><b>0 / 30</b><span> lessons completed</span><i><span></span></i></div>
+ <div class="lingvera-preview__lessons">
+ <div class="lingvera-preview__lesson"><span class="lingvera-preview__lesson-icon">✳</span><small>A1 · 5 min</small><b>First words</b><span>4 quick exercises</span></div>
+ <div class="lingvera-preview__lesson"><span class="lingvera-preview__lesson-icon">◈</span><small>A1 · 5 min</small><b>Introducing yourself</b><span>4 quick exercises</span></div>
+ <div class="lingvera-preview__lesson"><span class="lingvera-preview__lesson-icon">✦</span><small>A1 · 5 min</small><b>Everyday English</b><span>4 quick exercises</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">02 / LEARNING WEB APP</p>
+ <h3 class="project__title">Lingvéra</h3>
+ </div>
+
+ <p class="project__description" data-i18n="projects.lingvera.description">
+ A deployed Telegram-first English-learning MVP built around short A1 lessons and consistent practice. The React + TypeScript Mini App connects to a FastAPI backend with persistent learning data, server-side answer checking, progress tracking, and scheduled vocabulary review. The Telegram bot provides the `/start` entry point.
+ </p>
+
+ <p class="project__stack">
+ React · TypeScript · Vite · FastAPI · Python · SQLAlchemy · PostgreSQL · SQLite
+ </p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.lingvera.feature1">30 lessons and 120 A1 exercises</li>
+ <li data-i18n="projects.lingvera.feature2">Three exercise types with answer validation</li>
+ <li data-i18n="projects.lingvera.feature3">Learning dashboard and progress tracking</li>
+ <li data-i18n="projects.lingvera.feature4">Vocabulary review scheduling</li>
+ <li data-i18n="projects.lingvera.feature5">Telegram Mini App authentication</li>
+ <li data-i18n="projects.lingvera.feature6">Live bot and hosted API</li>
+ </ul>
+
+ <div class="project__links">
+ <a href="https://lingv-ra.pages.dev/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+ <a href="https://github.com/PurpleeHead/Lingv-ra" target="_blank" rel="noopener noreferrer">GitHub</a>
+ <a class="project__link--telegram" href="https://t.me/LingveraLearnBot" target="_blank" rel="noopener noreferrer" aria-label="Open Lingvéra Telegram bot" data-i18n="projects.lingvera.telegram">Telegram Bot</a>
+ </div>
+ </div>
+ </article>
+
+ <!-- Sminex -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <div class="project__browser-address">sminex</div>
+ </div>
+
+ <div class="project__browser-screen">
+ <img
+ src="./images/sminex.png"
+ alt="Sminex — responsive residential complex landing page"
+ fetchpriority="high"
+ />
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">03 / LANDING PAGE</p>
+
+ <h3 class="project__title">Sminex</h3>
+ </div>
+
+ <p
+ class="project__description"
+ data-i18n="projects.sminex.description"
+ >
+ Responsive residential complex landing page built from a
+ provided design. Implemented page structure, responsive layout
+ and image optimization.
+ </p>
+
+ <p class="project__stack">
+ HTML5 · SCSS · BEM · SVG · WebP · Git
+ </p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.sminex.feature1">
+ Responsive layout
+ </li>
+
+ <li>BEM</li>
+
+ <li data-i18n="projects.sminex.feature3">SVG sprite</li>
+
+ <li data-i18n="projects.sminex.feature4">
+ Image optimization
+ </li>
+ </ul>
+
+ <div class="project__links">
+ <a
+ href="https://purpleehead.github.io/sminex/"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Live Demo
+ </a>
+
+ <a
+ href="https://github.com/PurpleeHead/sminex"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ GitHub
+ </a>
+ </div>
+ </div>
+ </article>
+
+ <!-- Personal Notes App -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--notes">
+ <div class="project__screens">
+ <img
+ src="./images/notes-auth.png"
+ alt="Personal Notes App — authentication"
+ loading="lazy"
+ decoding="async"
+ />
+
+ <img
+ src="./images/notes-list.png"
+ alt="Personal Notes App — notes list"
+ loading="lazy"
+ decoding="async"
+ />
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">04 / FULL-STACK WEB APP</p>
+
+ <h3 class="project__title">Personal Notes App</h3>
+ </div>
+
+ <p
+ class="project__description"
+ data-i18n="projects.notes.description"
+ >
+ Full-stack application for user registration, authentication
+ and personal notes with server-side data storage.
+ </p>
+
+ <p class="project__stack">
+ React · TypeScript · Express · JWT · LowDB · Zod
+ </p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.notes.feature1">
+ User registration and authentication
+ </li>
+
+ <li data-i18n="projects.notes.feature2">JWT + Cookies</li>
+
+ <li data-i18n="projects.notes.feature3">REST API</li>
+
+ <li data-i18n="projects.notes.feature4">Persistent notes</li>
+ </ul>
+
+ <div class="project__links">
+ <a
+ href="https://github.com/PurpleeHead/personal-notes-app"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ GitHub
+ </a>
+ </div>
+ </div>
+ </article>
+
+ <!-- Whitemark -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <div class="project__browser-address">whitemark</div>
+ </div>
+
+ <div class="project__browser-screen">
+ <video
+ src="./images/whitemark-preview.mp4"
+ autoplay
+ muted
+ loop
+ playsinline
+ preload="metadata"
+ aria-label="Whitemark — animated preloader"
+ ></video>
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">05 / LANDING PAGE</p>
+
+ <h3 class="project__title">Whitemark</h3>
+ </div>
+
+ <p
+ class="project__description"
+ data-i18n="projects.whitemark.description"
+ >
+ Responsive contact page with an animated preloader. Company
+ logos appear sequentially on the initial load, followed by a
+ smooth transition to the main interface.
+ </p>
+
+ <p class="project__stack">HTML5 · SCSS · BEM · SVG · Git</p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.whitemark.feature1">
+ Animated preloader
+ </li>
+
+ <li data-i18n="projects.whitemark.feature2">SVG sprite</li>
+
+ <li data-i18n="projects.whitemark.feature3">
+ CSS animations
+ </li>
+
+ <li data-i18n="projects.whitemark.feature4">
+ Responsive layout
+ </li>
+
+ <li data-i18n="projects.whitemark.feature5">GitHub Pages</li>
+ </ul>
+
+ <div class="project__links">
+ <a
+ href="https://purpleehead.github.io/whitemark-preview/"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Live Demo
+ </a>
+
+ <a
+ href="https://github.com/PurpleeHead/whitemark-preview"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ GitHub
+ </a>
+ </div>
+ </div>
+ </article>
+
+ <!-- W-Wave -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <div class="project__browser-address">w-wave</div>
+ </div>
+
+ <div class="project__browser-screen">
+ <img
+ src="./images/w-wave.png"
+ alt="W-Wave — responsive one-page website"
+ loading="lazy"
+ decoding="async"
+ />
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">06 / LANDING PAGE</p>
+
+ <h3 class="project__title">W-Wave</h3>
+ </div>
+
+ <p
+ class="project__description"
+ data-i18n="projects.wwave.description"
+ >
+ Responsive one-page website built from a provided design.
+ Implemented the page structure, responsive layout and
+ interactive interface elements.
+ </p>
+
+ <p class="project__stack">HTML5 · CSS3 · BEM · Git</p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.wwave.feature1">Responsive layout</li>
+
+ <li data-i18n="projects.wwave.feature2">BEM</li>
+
+ <li data-i18n="projects.wwave.feature3">SCSS</li>
+ </ul>
+
+ <div class="project__links">
+ <a
+ href="https://purpleehead.github.io/w-wave/"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Live Demo
+ </a>
+
+ <a
+ href="https://github.com/PurpleeHead/w-wave"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ GitHub
+ </a>
+ </div>
+ </div>
+ </article>
+
+ <!-- Evcalid -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <div class="project__browser-address">evcalid</div>
+ </div>
+
+ <div class="project__browser-screen">
+ <img
+ src="./images/evcalid.png"
+ alt="Evcalid — responsive one-page website"
+ loading="lazy"
+ decoding="async"
+ />
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">07 / LANDING PAGE</p>
+
+ <h3 class="project__title">Evcalid</h3>
+ </div>
+
+ <p
+ class="project__description"
+ data-i18n="projects.evcalid.description"
+ >
+ Responsive one-page website built as part of frontend layout
+ practice. The project focuses on page structure,
+ responsiveness and clean interface implementation.
+ </p>
+
+ <p class="project__stack">HTML5 · CSS3 · BEM · Git</p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.evcalid.feature1">
+ Responsive layout
+ </li>
+
+ <li data-i18n="projects.evcalid.feature2">Semantic HTML</li>
+
+ <li data-i18n="projects.evcalid.feature3">SCSS</li>
+
+ <li data-i18n="projects.evcalid.feature4">BEM</li>
+ </ul>
+
+ <div class="project__links">
+ <a
+ href="https://purpleehead.github.io/Evcalid/"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Live Demo
+ </a>
+
+ <a
+ href="https://github.com/PurpleeHead/Evcalid"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ GitHub
+ </a>
+ </div>
+ </div>
+ </article>
+
+ <!-- Lagoona -->
+
+ <article class="project reveal">
+ <div class="project__image project__image--browser">
+ <div class="project__browser">
+ <div class="project__browser-bar" aria-hidden="true">
+ <div class="project__browser-dots">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <div class="project__browser-address">lagoona</div>
+ </div>
+
+ <div class="project__browser-screen">
+ <img
+ src="./images/lagoona.png"
+ alt="Lagoona — hotel one-page website"
+ loading="lazy"
+ decoding="async"
+ />
+ </div>
+ </div>
+ </div>
+
+ <div class="project__content">
+ <div class="project__heading">
+ <p class="project__number">08 / ONE-PAGE WEBSITE</p>
+
+ <h3 class="project__title">Lagoona</h3>
+ </div>
+
+ <p
+ class="project__description"
+ data-i18n="projects.lagoona.description"
+ >
+ Static one-page hotel website created for HTML/CSS layout
+ practice. The project focuses on page structure, cards,
+ positioning and classic layout techniques.
+ </p>
+
+ <p class="project__stack">HTML5 · CSS3 · Flexbox · BEM · Git</p>
+
+ <ul class="project__features">
+ <li data-i18n="projects.lagoona.feature1">Semantic HTML</li>
+
+ <li data-i18n="projects.lagoona.feature2">Flexbox</li>
+
+ <li data-i18n="projects.lagoona.feature3">BEM</li>
+
+ <li data-i18n="projects.lagoona.feature4">Classic layout</li>
+
+ <li data-i18n="projects.lagoona.feature5">Non-responsive</li>
+ </ul>
+
+ <div class="project__links">
+ <a
+ href="https://purpleehead.github.io/Lagoona/"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Live Demo
+ </a>
+
+ <a
+ href="https://github.com/PurpleeHead/Lagoona"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ GitHub
+ </a>
+ </div>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- About -->
+
+ <section class="about" id="about">
+ <div class="container">
+ <div class="section__heading reveal">
+ <p class="section__subtitle" data-i18n="about.subtitle">About me</p>
+
+ <h2 class="section__title" data-i18n="about.title">
+ Frontend Developer
+ </h2>
+ </div>
+
+ <div class="about__content reveal">
+ <p class="about__text" data-i18n="about.intro">
+ Frontend Developer focused on building responsive web
+ interfaces and improving my skills through practical projects.
+ </p>
+
+ <p class="about__text about__text--small" data-i18n="about.text1">
+ I work with HTML5, CSS3, SCSS, JavaScript, TypeScript and React. I
+ use BEM, SVG sprites, SVG animations, responsive design, image
+ optimization and modern approaches to code organization.
+ </p>
+
+ <p class="about__text about__text--small" data-i18n="about.text2">
+ I work with Git and GitHub, can turn Figma designs into working
+ interfaces and pay attention to performance, semantics and
+ cross-browser compatibility.
+ </p>
+
+ <p class="about__text about__text--small" data-i18n="about.text3">
+ I also have basic English reading skills and can work with
+ technical documentation, developer resources, and code examples in
+ English. I am actively improving my English to communicate more
+ confidently in an international work environment.
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Skills -->
+
+ <section class="skills" id="skills">
+ <div class="container">
+ <div class="section__heading reveal">
+ <p class="section__subtitle" data-i18n="skills.subtitle">
+ Technologies & tools
+ </p>
+
+ <h2 class="section__title" data-i18n="skills.title">Skills</h2>
+ </div>
+
+ <div class="skills__grid">
+ <div class="skills__group reveal">
+ <h3 class="skills__group-title">HTML & CSS</h3>
+
+ <ul class="skills__list">
+ <li>HTML5</li>
+ <li>Semantic HTML</li>
+ <li>CSS3</li>
+ <li>SCSS</li>
+ <li>BEM</li>
+ <li>Flexbox</li>
+ <li>CSS Grid</li>
+ <li>Responsive Design</li>
+ <li>Mobile First</li>
+ </ul>
+ </div>
+
+ <div class="skills__group reveal">
+ <h3 class="skills__group-title">JavaScript</h3>
+
+ <ul class="skills__list">
+ <li>JavaScript ES6+</li>
+ <li>DOM</li>
+ <li>Events</li>
+ <li>Async / Await</li>
+ <li>Fetch API</li>
+ <li>JSON</li>
+ <li>ES Modules</li>
+ </ul>
+ </div>
+
+ <div class="skills__group reveal">
+ <h3 class="skills__group-title">React & TypeScript</h3>
+
+ <ul class="skills__list">
+ <li>React</li>
+ <li>TypeScript</li>
+ <li>React Hooks</li>
+ <li>React Router</li>
+ <li>React Hook Form</li>
+ <li>Zod</li>
+ <li>React Query</li>
+ </ul>
+ </div>
+
+ <div class="skills__group reveal">
+ <h3 class="skills__group-title">SVG & Optimization</h3>
+
+ <ul class="skills__list">
+ <li>SVG</li>
+ <li>SVG Sprite</li>
+ <li>SVG Animation</li>
+ <li>WebP</li>
+ <li>AVIF</li>
+ <li>Lazy Loading</li>
+ <li>Image Optimization</li>
+ <li>Lighthouse</li>
+ </ul>
+ </div>
+
+ <div class="skills__group reveal">
+ <h3 class="skills__group-title">Tools</h3>
+
+ <ul class="skills__list">
+ <li>Git</li>
+ <li>GitHub</li>
+ <li>Figma</li>
+ <li>VS Code</li>
+ <li>npm</li>
+ <li>Chrome DevTools</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <!-- Footer -->
+
+ <footer class="footer" id="contacts">
+ <div class="container">
+ <div class="section__heading reveal">
+ <p class="section__subtitle" data-i18n="footer.subtitle">Contact</p>
+
+ <h2 class="footer__title" data-i18n="footer.title">
+ Let's work together.
+ </h2>
+ </div>
+
+ <p class="footer__text reveal">
+ <span data-i18n="footer.text">
+ Open to job opportunities, freelance projects and interesting
+ frontend work.
+ </span>
+ </p>
+
+ <div class="footer__links reveal">
+ <!-- GitHub -->
+
+ <a
+ class="footer__link footer__link--github"
+ href="https://github.com/PurpleeHead"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="GitHub"
+ >
+ <span class="footer__icon" aria-hidden="true">
+ <svg
+ class="footer__icon-svg footer__icon-svg--github"
+ viewBox="0 0 24 24"
+ fill="currentColor"
+ >
+ <path
+ d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48
+ 0-.24-.01-1.04-.01-1.89-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46
+ -.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83
+ .09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68
+ -.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.84c.85 0
+ 1.7.12 2.49.35 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03
+ 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01
+ 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12C22 6.48 17.52 2 12 2Z"
+ />
+ </svg>
+ </span>
+
+ <span class="footer__link-text"> GitHub </span>
+ </a>
+
+ <!-- Telegram -->
+
+ <a
+ class="footer__link footer__link--telegram"
+ href="https://t.me/art_alberto"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="Telegram"
+ >
+ <span class="footer__icon" aria-hidden="true">
+ <svg
+ class="footer__icon-svg footer__icon-svg--telegram"
+ viewBox="0 0 24 24"
+ fill="none"
+ >
+ <path
+ class="telegram-plane"
+ d="M21.5 3.5 3.8 10.35c-.9.35-.89.84-.16 1.06l4.54 1.42
+ 1.74 5.43c.21.6.11.84.72.84.48 0 .69-.22.96-.48l2.34-2.27
+ 4.86 3.59c.89.49 1.53.23 1.75-.83L23.1 5.03c.32-1.31-.5-1.9-1.6-1.53Z"
+ fill="currentColor"
+ />
+
+ <path
+ class="telegram-line"
+ d="m8.18 12.83 9.66-6.09-7.52 7.03"
+ stroke="var(--footer-bg)"
+ stroke-width="0.9"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ />
+ </svg>
+ </span>
+
+ <span class="footer__link-text"> Telegram </span>
+ </a>
+
+ <!-- Email -->
+
+ <a
+ class="footer__link footer__link--email"
+ href="https://mail.google.com/mail/?view=cm&fs=1&to=purpleehead@gmail.com"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="Email"
+ >
+ <span class="footer__icon" aria-hidden="true">
+ <svg
+ class="footer__icon-svg footer__icon-svg--email"
+ viewBox="0 0 32 24"
+ fill="none"
+ >
+ <rect
+ class="email-envelope"
+ x="1.5"
+ y="2"
+ width="29"
+ height="20"
+ rx="2"
+ stroke="currentColor"
+ stroke-width="1.8"
+ />
+
+ <rect
+ class="email-letter"
+ x="7"
+ y="6"
+ width="18"
+ height="14"
+ rx="1"
+ fill="var(--footer-bg)"
+ stroke="currentColor"
+ stroke-width="1.4"
+ />
+
+ <path
+ class="email-folds"
+ d="m2.5 4 13.5 9.5L29.5 4"
+ stroke="currentColor"
+ stroke-width="1.8"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ />
+
+ <path
+ class="email-flap"
+ d="M2.5 4 16 14 29.5 4"
+ stroke="currentColor"
+ stroke-width="1.8"
+ stroke-linecap="round"
+ stroke-linejoin="round"
+ />
+ </svg>
+ </span>
+
+ <span class="footer__link-text"> Email </span>
+ </a>
+
+ <!-- Facebook -->
+
+ <a
+ class="footer__link footer__link--facebook"
+ href="https://www.facebook.com/share/18oFMNGd2a/?mibextid=wwXIfr"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="Facebook"
+ >
+ <span class="footer__icon" aria-hidden="true">
+ <svg
+ class="footer__icon-svg footer__icon-svg--facebook"
+ viewBox="0 0 24 24"
+ fill="none"
+ >
+ <circle
+ class="facebook-circle"
+ cx="12"
+ cy="12"
+ r="10"
+ fill="currentColor"
+ />
+
+ <path
+ class="facebook-f"
+ d="M13.6 19v-6h2.05l.3-2.35H13.6V9.15c0-.68.19-1.15 1.18-1.15h1.26V5.9c-.22-.03-.97-.1-1.85-.1-1.84 0-3.1 1.12-3.1 3.17v1.68H9V13h2.09v6h2.51Z"
+ fill="var(--footer-bg)"
+ />
+ </svg>
+ </span>
+
+ <span class="footer__link-text"> Facebook </span>
+ </a>
+
+ <!-- WhatsApp -->
+
+ <a
+ class="footer__link footer__link--whatsapp"
+ href="https://wa.me/qr/HSRSUZ6X5WVGI1?s=r"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="WhatsApp"
+ >
+ <span class="footer__icon" aria-hidden="true">
+ <svg
+ class="footer__icon-svg footer__icon-svg--whatsapp"
+ viewBox="0 0 24 24"
+ fill="none"
+ >
+ <path
+ class="whatsapp-bubble"
+ d="M12 2.25a9.75 9.75 0 0 0-8.36 14.76L2.5 21.5l4.66-1.1A9.75 9.75 0 1 0 12 2.25Z"
+ fill="currentColor"
+ />
+
+ <path
+ class="whatsapp-phone"
+ d="M8.65 7.35c.27-.27.57-.3.8-.08l1.08 1.06c.23.23.25.53.08.82l-.55.86c-.12.19-.13.42-.02.62.32.57.76 1.12 1.3 1.64.54.53 1.1.94 1.67 1.25.2.11.43.1.61-.03l.82-.59c.28-.2.59-.19.83.03l1.1 1.03c.24.22.24.54-.02.83l-.62.69c-.4.44-1.03.62-1.62.43-1.17-.38-2.47-1.2-3.68-2.4-1.2-1.19-2.04-2.47-2.43-3.64-.2-.59-.03-1.22.4-1.63l.65-.61Z"
+ fill="var(--footer-bg)"
+ />
+ </svg>
+ </span>
+
+ <span class="footer__link-text"> WhatsApp </span>
+ </a>
+
+ <!-- Instagram -->
+
+ <a
+ class="footer__link footer__link--instagram"
+ href="https://www.instagram.com/daehelprup?stkn=YWQ0ZXdtY3d0anE4&utm_source=qr"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="Instagram"
+ >
+ <span class="footer__icon" aria-hidden="true">
+ <svg
+ class="footer__icon-svg footer__icon-svg--instagram"
+ viewBox="0 0 24 24"
+ fill="none"
+ >
+ <rect
+ class="instagram-frame"
+ x="3"
+ y="3"
+ width="18"
+ height="18"
+ rx="5"
+ stroke="currentColor"
+ stroke-width="2"
+ />
+
+ <circle
+ class="instagram-lens"
+ cx="12"
+ cy="12"
+ r="4"
+ stroke="currentColor"
+ stroke-width="2"
+ />
+
+ <circle
+ class="instagram-dot"
+ cx="17.3"
+ cy="6.7"
+ r="1.2"
+ fill="currentColor"
+ />
+ </svg>
+ </span>
+
+ <span class="footer__link-text"> Instagram </span>
+ </a>
+ </div>
+
+ <p class="footer__copyright" data-i18n="footer.copyright">
+ © 2026 Kutelev Artem. Frontend Developer.
+ </p>
+ </div>
+ </footer>
+
+ <script defer src="./js/script.js"></script>
+ </body>
 </html>
