@@ -1,6 +1,6 @@
-# Artem Kutelev — Frontend Portfolio
+# Artem Kutelev — Frontend & AI Application Portfolio
 
-Personal portfolio website showcasing frontend projects, practical skills, and selected work.
+Personal portfolio showcasing frontend development, full-stack projects, and an expanding focus on AI-powered web applications.
 
 ## Live demo
 
@@ -8,7 +8,7 @@ https://purpleehead.github.io/portfolio/
 
 ## About
 
-A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. It features a bilingual English/Russian interface, light and dark themes, animated interactions, and a curated project list.
+A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. It features a bilingual English/Russian interface, light and dark themes, animated interactions, and a curated project list. The positioning keeps Frontend Developer as the core specialty while highlighting backend/API experience and growing AI application skills.
 
 ## Features
 
@@ -19,6 +19,8 @@ A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. It
 - Animated hero lens and social links
 - Semantic HTML and accessibility-focused details
 - Optimized project previews and responsive layouts
+- AI application and LLM-related learning focus
+- Backend, REST API, and database skills
 
 ## Tech stack
 
@@ -29,6 +31,10 @@ A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. It
 - Responsive design and BEM
 - SVG
 - Git and GitHub Pages
+- Python and FastAPI
+- Node.js and Express
+- PostgreSQL and SQLite
+- AI application concepts, prompt design, and LLM workflows
 
 ## Featured projects
 
@@ -91,7 +97,7 @@ Static one-page hotel website created for HTML/CSS layout practice.
 
 ## Author
 
-**Artem Kutelev** — Frontend Developer
+**Artem Kutelev** — Frontend Developer | Full-Stack Projects | AI Application Development
 
 - [Portfolio](https://purpleehead.github.io/portfolio/)
 - [GitHub](https://github.com/PurpleeHead)
