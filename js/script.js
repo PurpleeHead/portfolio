@@ -18,6 +18,7 @@
  "hero.title": "I build modern<br />and responsive web interfaces.",
  "hero.status": "Open to work",
  "hero.button": "View projects",
+ "hero.stack": "React · TypeScript · Responsive UI · AI-powered products",
 
  "projects.subtitle": "Selected work",
  "projects.title": "Projects",
@@ -86,21 +87,23 @@
  "about.subtitle": "About me",
  "about.title": "Frontend Developer",
  "about.intro":
- " Frontend Developer focused on building responsive web interfaces and improving my skills through practical projects.",
+ " Frontend Developer focused on responsive interfaces, React applications, and expanding into AI-powered product development.",
  "about.text1":
  "I work with HTML5, CSS3, SCSS, JavaScript, TypeScript and React. I use BEM, SVG sprites, SVG animations, responsive design, image optimization and modern approaches to code organization.",
  "about.text2":
- "I work with Git and GitHub, can turn Figma designs into working interfaces and pay attention to performance, semantics and cross-browser compatibility.",
+ "I work with Git and GitHub, turn Figma designs into working interfaces, and build full-stack projects with APIs and databases. I pay attention to performance, semantics, and maintainable code.",
  "about.text3":
- "I also have basic English reading skills and can work with technical documentation, developer resources, and code examples in English. I am actively improving my English to communicate more confidently in an international work environment.",
+ "I am expanding my practical experience with AI-powered products, including prompt design, LLM application concepts, structured outputs, and API-based workflows. I can work with English technical documentation and am actively improving my spoken English.",
 
  "skills.subtitle": "Technologies & tools",
  "skills.title": "Skills",
+ "skills.aiTitle": "AI & LLM Applications",
+ "skills.backendTitle": "Backend & APIs",
 
  "footer.subtitle": "Contact",
  "footer.title": "Let's work together.",
  "footer.text":
- "Open to job opportunities, freelance projects and interesting frontend work.",
+ "Open to frontend roles, full-stack projects, and opportunities to build AI-enabled web applications.",
  "footer.copyright": "© 2026 Kutelev Artem. Frontend Developer.",
  },
 
@@ -114,6 +117,7 @@
  "hero.title": "Создаю современные<br />и адаптивные веб-интерфейсы.",
  "hero.status": "Открыт к работе",
  "hero.button": "Смотреть проекты",
+ "hero.stack": "React · TypeScript · адаптивные интерфейсы · AI-продукты",
 
  "projects.subtitle": "Мои работы",
  "projects.title": "Проекты",
@@ -182,21 +186,23 @@
  "about.subtitle": "Обо мне",
  "about.title": "Frontend Developer",
  "about.intro":
- " Frontend Developer, создаю адаптивные веб-интерфейсы и развиваю навыки на практических проектах.",
+ " Frontend Developer, создаю адаптивные интерфейсы и React-приложения, параллельно развиваясь в направлении AI-продуктов.",
  "about.text1":
  "Работаю с HTML5, CSS3, SCSS, JavaScript, TypeScript и React. Использую БЭМ, SVG-спрайты, SVG-анимации, адаптивную верстку, оптимизацию изображений и современные подходы к организации кода.",
  "about.text2":
- "Работаю с Git и GitHub, умею переводить макеты из Figma в готовые интерфейсы и уделяю внимание производительности, семантике и кроссбраузерности.",
+ "Работаю с Git и GitHub, превращаю макеты Figma в готовые интерфейсы и создаю full-stack проекты с API и базами данных. Уделяю внимание производительности, семантике и поддерживаемости кода.",
  "about.text3":
- "У меня также есть базовые навыки чтения на английском языке, и я могу работать с технической документацией, ресурсами для разработчиков и примерами кода на английском. Я активно улучшаю свой английский, чтобы более уверенно общаться в международной рабочей среде.",
+ "Развиваю практические навыки создания AI-продуктов: проектирование промптов, основы LLM-приложений, структурированные ответы и API-сценарии. Умею работать с технической документацией на английском и продолжаю улучшать разговорный английский.",
 
  "skills.subtitle": "Технологии и инструменты",
  "skills.title": "Навыки",
+ "skills.aiTitle": "AI и LLM-приложения",
+ "skills.backendTitle": "Backend и API",
 
  "footer.subtitle": "Контакты",
  "footer.title": "Обсудим проект?",
  "footer.text":
- "Открыт к предложениям о работе, freelance-задачам и интересным frontend-проектам.",
+ "Рассматриваю вакансии Frontend Developer, full-stack проекты и задачи по созданию веб-приложений с AI-функциями.",
  "footer.copyright": "© 2026 Kutelev Artem. Frontend Developer.",
  },
  };
@@ -232,24 +238,24 @@
  );
 
  if (lang === "ru") {
- document.title = "Kutelev Artem — Frontend Developer";
+ document.title = "Kutelev Artem — Frontend Developer | React, TypeScript & AI Applications";
 
  description?.setAttribute(
  "content",
- "Портфолио Kutelev Artem — Frontend Developer. HTML, CSS, JavaScript, TypeScript и React.",
+ "Портфолио Артёма Кутелева — Frontend Developer: React, TypeScript, API, full-stack проекты и развитие в AI-приложениях.",
  );
 
  ogTitle?.setAttribute(
  "content",
- "Kutelev Artem — Frontend Developer",
+ "Kutelev Artem — Frontend Developer | React, TypeScript & AI Applications",
  );
 
  ogDescription?.setAttribute(
  "content",
- "Портфолио Frontend Developer — веб-интерфейсы, React, TypeScript, HTML и SCSS.",
+ "Портфолио Frontend Developer — адаптивные интерфейсы, React, TypeScript, full-stack и AI-приложения.",
  );
  } else {
- document.title = "Kutelev Artem — Frontend Developer";
+ document.title = "Kutelev Artem — Frontend Developer | React, TypeScript & AI Applications";
 
  description?.setAttribute(
  "content",
@@ -258,12 +264,12 @@
 
  ogTitle?.setAttribute(
  "content",
- "Kutelev Artem — Frontend Developer",
+ "Kutelev Artem — Frontend Developer | React, TypeScript & AI Applications",
  );
 
  ogDescription?.setAttribute(
  "content",
- "Frontend Developer portfolio — responsive web interfaces, React, TypeScript, HTML and SCSS.",
+ "Frontend portfolio featuring React, TypeScript, full-stack projects, and an expanding focus on AI-powered applications.",
  );
  }
  }
